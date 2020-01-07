@@ -1,0 +1,10 @@
+1.  configure storage.yml for S3 bucket to store active_storage image uploads.
+
+9. mailchimp integration
+  https://github.com/amro/gibbon
+  Need login creds for mailchimp account
+  nicolehallbooks@gmail.com, Sweetz33>
+
+10. Get a domain and get this on AWS
+11. GMail oauth with actual domain on AWS
+

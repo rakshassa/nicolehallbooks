@@ -1,0 +1,19 @@
+<div class="py-5 pl-4" id="subscribe-floater">
+  <h3>Newsletter</h3>
+  <p>Get all the latest information about Nicole's books and contests!</p>
+
+  <div id="subscribe-contents">
+    <%= form_for(@subscription) do |f| %>
+      <div class="row">
+        <div class="col-12">
+          <%= f.label :email, "Email", class: "font-weight-bold" %>
+          <div class="input-group input-group-lg">
+            <%= f.text_field :email, placeholder: " Your Email Address ",
+              class: 'form-control input-lg' %>
+          </div>
+        </div>
+      </div>
+      <%= f.submit "Subscribe", class: 'btn my-2', style: 'background: #AF32B2; color: white;' %>
+    <% end %>
+  </div>
+</div>

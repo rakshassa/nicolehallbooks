@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'playlistscript';
+    src: url('playlist_script-webfont.woff2') format('woff2'),
+         url('playlist_script-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anaktoriaregular';
+    src: url('anaktoria-webfont.woff2') format('woff2'),
+         url('anaktoria-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.banner {
+  right: 0;
+  left: 0;
+  background-image: image-url("nicole-cover.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  width: 100% !important;
+  min-width: 400px;
+}
+
+.banner-content {
+  text-align: center;
+}
+
+.banner-content h1 {
+  font-family: 'playlistscript';
+  font-size: 150px;
+  font-weight: 700;
+  line-height: 1.15em;
+  margin-bottom: 20px;
+  background: white;
+  padding: 10px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tag-line {
+  font-family: 'anaktoriaregular';
+  display: inline-block;
+  font-size: 30px;
+}
+
+/* non-white background for expanded nav menu on mobile */
+@media (max-width: 767px) {
+  .banner-content h1 {
+    font-size: 70px;
+  }
+  .tag-line {
+  font-size: 20px;
+  }
+}
+
+

@@ -1,0 +1,41 @@
+<table class="table table-hover table-striped">
+  <thead class="color-header">
+    <tr>
+      <th>Tier</th>
+      <th>Health</th>
+      <th>Damage</th>
+      <th>Armor</th>
+      <th>Focus</th>
+      <th>Resist</th>
+      <th>Crit Damage</th>
+      <th>Crit Chance</th>
+      <th>Speed</th>
+      <th>Dodge Chance</th>
+      <th>Block Chance</th>
+      <th>Block Amount</th>
+      <th>Accuracy</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% character.character_gears.order("character_gears.tier ASC").each do |gear_tier| %>
+    <tr>
+        <td><%= gear_tier.tier %></td>
+        <td><%= gear_tier.health %></td>
+        <td><%= gear_tier.damage %></td>
+        <td><%= gear_tier.armor %></td>
+        <td><%= gear_tier.focus %></td>
+        <td><%= gear_tier.resist %></td>
+        <td><%= gear_tier.crit_damage %></td>
+        <td><%= gear_tier.crit_chance %></td>
+        <td><%= gear_tier.speed %></td>
+        <td><%= gear_tier.dodge_chance %></td>
+        <td><%= gear_tier.block_chance %></td>
+        <td><%= gear_tier.block_amount %></td>
+        <td><%= gear_tier.accuracy %></td>
+        <td><%= link_to 'Slots', gear_slots_character_path(character, :tier => gear_tier.tier) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

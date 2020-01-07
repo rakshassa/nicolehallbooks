@@ -1,0 +1,192 @@
+TODO: How do we simulate a fight with only 1 roster.  Each registered person needs to be able to create multiple Rosters
+  -- everyone can create 2 rosters (limited to one version of each character)
+  -- pay to have additional 2 rosters - multiple purchases allowed
+  -- patreon link to monitize
+  -- import teams from every node in every campaign/scenario/challenge
+    -- simulate battles against them (pay)
+  -- create a discord to discuss the website, make suggestions, etc
+  -- consider "ads" to monitize
+
+1.2. Home Page should be more attractive (advertisement for self)
+  -- Blurb about what we are doing with "Get Started" button to register/login.
+  -- Vertical scroll to colored sections: Browse Every Character, Create a Roster, Simulate Battles
+    -- collage/images in each section from the actual website.
+1.3 Character List
+  -- search by char name or trait (partial matching, instant filtering)
+    -- see msf.gg for filters
+    -- or use search/filter/sort options like "in-game"
+  -- layout improvement
+    -- see "in-game" layout of roster
+2. omniauth through discord/google/facebook to have a custom player to store roster
+  -- google and facebook omni needs app config
+3. show roster (or force login)
+  -- switch to a new roster
+    -- everyone starts with one main roster
+    -- clone existing (same stats as selected one)
+    -- create new (nothing unlocked)
+    -- delete roster (do not allow delete of main one)
+    -- player has a "max_rosters" setting based on how many times they have paid to unlock more (default: 2)
+  -- character list with color change for not-unlocked
+    -- select toon, set level/stars/gear/etc
+    -- calculate total stats (health, damage, etc)
+  -- mark favorites (to stay on top)
+  -- search/filter/sort options like "in-game"
+4. create/edit squad
+  -- select 5 toons from roster, give positions
+    -- search/filter/sort options like "in-game"
+5. select 2 squads to fight each other
+  -- run pre-battle passives
+  -- determine initiate
+  -- cycle initiative and proc before/during/after skills
+
+=======================
+ROSTER (database)
+=======================
+
+player
+  - name
+  - stark_tech (1-25% for simplicity)
+
+unlocked_character
+  - player_id (foreign)
+  - character_id (foreign)
+
+  - level
+  - gear_tier (ignoring individual gear)
+  - yellow_stars
+  - red_stars
+  - basic_rank
+  - special_rank
+  - ultimate_rank
+  - passive_rank
+
+Squads (1-5 records per squad - no duplicate positions or characters)
+  - player_id
+  - squad_id
+  - unlocked_character_id
+  - position
+
+=======================
+Calculated Stats (state based)
+=======================
+stats
+  - health
+  - damage
+  - armor
+  - focus
+  - resistance
+  - crit_damage
+  - crit_chance
+  - speed
+  - dodge_chance
+  - block_chance
+  - block_amount
+  - accuracy
+
+NOTE: calculation is:
+
+total = base_adjusted_for_level + yellow_star + red_star + gear + stark_tech + passive_ability_mods
+
+
+=======================
+Effects (database)
+=======================
+effect (see msf.gg/effects)
+  - name
+  - description
+  - expiration
+  - opposite_effect_id
+
+=======================
+Battle (state based)
+=======================
+battle
+  - team_1
+  - team_2
+
+team
+  - player_id
+  - battle_characters
+
+battle_character
+  - unlocked_character_id
+  - position
+  - battle_effects
+  - is_alive
+  - stats
+  - special_ability_energy
+  - ultimate_ability_energy
+  - has_revived
+  - is_clone
+  - is_summon
+  - speed_bar (0-1000) - so 50% speed bar is 500 speed_bar.
+    -- each tick, gain your speed value toward speed bar.
+    -- speed bar can add infinitely - each turn taken reduces by 1000
+    -- ??? how do we move forward on "ticks" - calculate which toon is fewest ticks from 1k, and increment by that much tick.
+
+======================
+Battle-Setup (state based)
+======================
+
+Select Players (2)
+For each player:
+  Select Squads and position characters
+For each toon:
+  Calculate Synergies
+  Calculate starting stats
+  Calculate starting ability energy
+  Execute Passives (on-battle-begins)
+
+======================
+Battle-Turns (processing)
+======================
+
+Select next toon:
+  If any toon.speed_bar > 1000:
+    select all toons with highest speed_bar:
+      on tie: random select from highest speed_bar toons
+      else: select highest speed_bar toon
+  Else:
+    calculate how many ticks (fractional) until 1000 speed_bar for each toon.
+    select toon with lowest fractional_ticks_remaining AND increment all speed_bars by that many ticks. (on tie, random select one)
+
+Select Target:
+  if any enemy has taunt, random select one.
+  else: if any enemy has no stealth, random select one.
+  else: random select any enemy
+
+Select ability:
+  if stunned: skip turn
+  if ability blocked: use basic
+
+  if ultimate has enough energy: use ultimate
+  else if special has enough energy: use special
+  else use basic
+
+Process outcomes
+  consider AOE, hit all, hit adjacent, and chains
+  calculate damage/kills
+  add/remove effects
+  assists
+
+
+============================
+Effects (processing)
+============================
+on-turn-start (bleed/regen)
+on-turn-end (remove ending effects)
+on-friendly-turn-start
+on-friendly-turn-end (assist)
+on-enemy-turn-start
+on-enemy-turn-end (counter)
+on-kill (black-panther speed_bar)
+on-death (ultron revive)
+on-any-death (mordo heal)
+
+toon.process_ability(ability_id, target)
+toon.process_assist(target)
+toon.process_counter(target)
+
+=============
+references:
+damage calculation: https://www.reddit.com/r/MarvelStrikeForce/comments/ajinvm/the_complete_damage_calculation_hopefully/

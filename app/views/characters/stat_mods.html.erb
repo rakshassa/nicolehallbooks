@@ -1,0 +1,22 @@
+<%= render 'character_header', character: @character %>
+
+<ul class="tabrow">
+    <li><%= link_to 'Abilities', @character %></li>
+    <li><%= link_to 'Gear', gear_character_path(@character) %></li>
+    <li class="selected"><a href="#">Stats</a></li>
+</ul>
+
+<br>
+<div class="row">
+  <%= render 'stat_box', name: 'Health', data: @character.health_mods %>
+  <%= render 'stat_box', name: 'Damage', data: @character.damage_mods %>
+  <%= render 'stat_box', name: 'Armor', data: @character.armor_mods %>
+  <%= render 'stat_box', name: 'Focus', data: @character.focus_mods %>
+  <%= render 'stat_box', name: 'Resist', data: @character.resist_mods %>
+</div>
+<div class="row">
+  <%= render 'stat_box', name: 'Speed', data: @character.speed_mods %>
+  <%= render 'stat_box', name: 'Accuracy', data: @character.accuracy_mods %>
+</div>
+
+

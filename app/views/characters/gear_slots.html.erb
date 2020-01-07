@@ -1,0 +1,12 @@
+<%= render 'character_header', character: @character %>
+<ul class="tabrow">
+    <li><%= link_to 'Abilities', @character %></li>
+    <li><%= link_to 'Gear', gear_character_path(@character) %></li>
+    <li><%= link_to 'Stat Mods', stat_mods_character_path(@character) %></li>
+</ul>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%= render 'gear_slots_table', { character: @character, tier: @tier, character_gear_tier: @character_gear_tier } %>
+  </div>
+</div>

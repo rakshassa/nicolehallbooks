@@ -1,0 +1,17 @@
+<table class="table table-hover table-striped">
+  <thead class="color-header">
+    <tr>
+      <th>Level</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% mods.order("level ASC").each do |mod| %>
+    <tr>
+        <td class="col-xs-6"><%= mod.level %></td>
+        <td class="col-xs-6"><%= mod.value %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

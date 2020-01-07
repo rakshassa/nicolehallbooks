@@ -1,0 +1,27 @@
+<%= button_to 'import characters', import_characters_characters_path, class: "login-button", method: :post %>
+<%= button_to 'import gear', import_character_gear_characters_path, class: "login-button", method: :post %>
+<%= button_to 'import stats', import_character_stats_characters_path, class: "login-button", method: :post %>
+
+<h1>Characters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= character.name %>
+        <td><%= link_to 'Details', character %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Character', new_character_path %>

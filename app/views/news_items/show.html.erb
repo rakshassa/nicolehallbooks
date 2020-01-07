@@ -1,0 +1,34 @@
+<div class="container">
+  <hr>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-1"><b>Date</b></div>
+        <div class="col-md-11"><%= @news_item.posted_date %></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1"><b>Title</b></div>
+        <div class="col-md-11"><%= @news_item.title %></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1"><b>Image</b></div>
+        <div class="col-md-11">
+          <% if @news_item.picture.attached? %>
+            <image src="<%= url_for(@news_item.picture) %>"></image>
+          <% else %>
+            None
+          <% end %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1"><b>Body</b></div>
+        <div class="col-md-11"><%= @news_item.body %></div>
+      </div>
+
+      <!-- embed links table here -->
+    </div>
+  </div>
+</div>

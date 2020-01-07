@@ -1,0 +1,91 @@
+<%= form_with(model: news_item, local: true) do |f| %>
+  <% if news_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(news_item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% news_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-4">
+      <%= f.label :is_book, class: "font-weight-bold" do %>
+        <%= f.check_box :is_book %>
+        Book
+      <% end %>
+    </div>
+    <div class="col-4">
+      <%= f.label :is_news, class: "font-weight-bold" do %>
+        <%= f.check_box :is_news %>
+        News
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
+      <%= f.label :posted_date, "Date", class: "font-weight-bold" %>
+      <div class="input-group input-group-lg">
+        <%= f.text_field :posted_date, placeholder: " Type your Date here ",
+          :data => {:provide => 'datepicker', 'date-format' => 'M dd, yyyy', 'date-autoclose' => 'true'},
+          class: 'form-control input-lg date', :value => news_item&.posted_date&.strftime('%B %d, %Y') %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
+      <%= f.label :title, "Title", class: "font-weight-bold" %>
+      <div class="input-group input-group-lg">
+        <%= f.text_field :title, placeholder: " Type your Title here ", class: 'form-control input-lg' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
+      <% if news_item.picture.attached? %>
+        <%= f.label :existing_picture, "Current Image File: " + news_item&.picture&.blob&.filename&.to_s, class: "font-weight-bold" %>
+        <image src="<%= url_for(@news_item.picture) %>"></image>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <%= f.label :picture, "Change the Image", class: "font-weight-bold" %>
+            <div class="input-group input-group-lg">
+              <%= f.file_field :picture, class: 'form-control input-lg' %>
+            </div>
+          </div>
+        </div>
+      <% else %>
+        <%= f.label :picture, "Image", class: "font-weight-bold" %>
+        <div class="input-group input-group-lg">
+          <%= f.file_field :picture, class: 'form-control input-lg' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
+      <%= f.label :body, "Body", class: "font-weight-bold" %>
+      <div class="input-group input-group-lg">
+        <%= f.text_area :body, placeholder: " Type your Body here ", rows: "10", class: 'form-control input-lg', id: 'example' %>
+      </div>
+    </div>
+  </div>
+
+
+  <br><br>
+  <div class="actions row">
+    <div class="col-2">
+      <%= f.submit "Save", class: 'btn btn-primary' %>
+      <%= link_to 'Cancel', news_items_path, class: 'btn btn-warning' %>
+    </div>
+  </div>
+<% end %>
+
+<br><br>

@@ -1,0 +1,47 @@
+<%= render 'banner' %>
+
+<div class="profile-container py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 profile-body ">
+        <h1>Send Nicole an Email</h1>
+
+        <%= form_tag email_homes_path do%>
+
+          <div class="row py-2">
+            <div class="col-8">
+              <%= label_tag :email, "Your Email Address", class: "font-weight-bold" %>
+              <div class="input-group input-group-lg">
+                <%= text_field_tag :email, '', placeholder: " Your Email Address ", class: 'form-control input-lg' %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-2">
+            <div class="col-8">
+              <%= label_tag :subject, "Subject", class: "font-weight-bold" %>
+              <div class="input-group input-group-lg">
+                <%= text_field_tag :subject, '', placeholder: " the Subject of your Email ", class: 'form-control input-lg' %>
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-2">
+            <div class="col-8">
+              <%= label_tag :body, "Email Message", class: "font-weight-bold" %>
+              <div class="input-group input-group-lg">
+                <%= text_area_tag :body, '', class: 'form-control input-lg', rows: "10" %>
+              </div>
+            </div>
+          </div>
+
+          <%= submit_tag "Send", class: 'btn btn-primary py-2' %>
+
+        <%end%>
+      </div>
+
+      <div class="col-md-3 px-2">
+        <%= render 'layouts/sidebar' %>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+defaults: &defaults
+  posts_per_page: 5
+
+development:
+  <<: *defaults
+
+production:
+  <<: *defaults
+

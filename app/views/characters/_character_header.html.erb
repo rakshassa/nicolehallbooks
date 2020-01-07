@@ -1,0 +1,30 @@
+
+<div class="row">
+  <%= link_to 'All Characters', characters_path, :class => "btn btn-warning" %>
+</div>
+
+<div class="row">
+  <div class="col-md-1">
+    <%= render 'portrait', character: @character %>
+  </div>
+  <div class="col-md-11">
+    <div class="row col-md-12"><h1><%= character.name %></h1></div>
+    <div class="row col-md-12"><%= character.description %></div>
+    <br>
+    <div class="row col-md-12">
+      <% character.traits.each do |trait| %>
+      <span class="label label-primary"><%= trait %></span>
+      <% end %>
+    </div>
+    <div class="row col-md-6"><h4>
+      Unlock:
+      <% for idx in 1..character.unlock_at do %>
+        <i class="fa fa-star" style="color:yellow"></i>
+      <% end %>
+      <% for idx in character.unlock_at..6 do %>
+        <i class="fa fa-star" style="color:grey"></i>
+      <% end %>
+    </h4></div>
+  </div>
+</div>
+<br>
