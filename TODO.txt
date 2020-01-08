@@ -8,3 +8,14 @@
 10. Get a domain and get this on AWS
 11. GMail oauth with actual domain on AWS
 
+12. elastic beanstalk debugging
+  -- we MUST setup RDS postgres before we can continue (see below) !!!
+  -- start env
+  -- ssh into it
+  -- try the custom commands to install upgraded node.js
+  https://stackoverflow.com/questions/52751886/rails-5-1-6-aws-elastic-beanstalk-yarn-node-js-issue
+  -- consider more memory usage
+  https://hackernoon.com/how-to-setup-and-deploy-a-rails-5-app-on-aws-beanstalk-with-postgresql-redis-and-more-88a38355f1ea
+  -- consider RDS database for postgres
+  https://www.freecodecamp.org/news/how-to-deploy-a-rails-5-2-postgresql-app-on-aws-elastic-beanstalk-34e5cec3a984/
+  https://medium.com/@jameshamann/deploying-rails-5-app-using-elastic-beanstalk-and-postgresql-8ca19bc7648a

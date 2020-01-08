@@ -27,6 +27,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem "font-awesome-rails"
 # gem 'bootstrap-sass', '~> 3.3'
 
+# gem 'libv8', '7.3.492.27.1'
+# gem 'mini_racer', '0.2.8'
+# gem 'therubyracer', :platform => :ruby
+
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'bootstrap-datepicker-rails'
