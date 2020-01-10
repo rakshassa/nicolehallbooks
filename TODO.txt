@@ -1,10 +1,2 @@
 1.  configure storage.yml for S3 bucket to store active_storage image uploads.
 
-9. mailchimp integration
-  https://github.com/amro/gibbon
-  Need login creds for mailchimp account
-  nicolehallbooks@gmail.com, Sweetz33>
-
-  apikey: 4c34b7b8c1aeb34fc2a65fd6f10f965f-us4
-
-10. use mailchimp ENV var for API instead of hardcoding

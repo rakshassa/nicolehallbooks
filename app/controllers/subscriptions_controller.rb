@@ -17,15 +17,11 @@ class SubscriptionsController < ApplicationController
   private
 
   def tell_mailchimp(email)
-    # TODO: use ENV variable: MAILCHIMP_API_KEY  instead of hardcoding in this file
-
-    # Gibbon::Request.api_key = "your_api_key"
     Gibbon::Request.timeout = 15
     Gibbon::Request.open_timeout = 15
     Gibbon::Request.symbolize_keys = true
     Gibbon::Request.debug = true
 
-    # gibbon = Gibbon::Request.new(api_key: "4c34b7b8c1aeb34fc2a65fd6f10f965f-us4")
     gibbon = Gibbon::Request.new
 
     # TODO: these are paged - so paginate iteration
