@@ -19,3 +19,17 @@
   -- consider RDS database for postgres
   https://www.freecodecamp.org/news/how-to-deploy-a-rails-5-2-postgresql-app-on-aws-elastic-beanstalk-34e5cec3a984/
   https://medium.com/@jameshamann/deploying-rails-5-app-using-elastic-beanstalk-and-postgresql-8ca19bc7648a
+
+
+db: id: nicolehallbooks-pg
+  postgres 11.5-1
+
+  id: nicolehallbooks-pg96
+  postgres 9.6
+  user: voyage_admin4
+  pword: asdflkjh123!!!zirsd
+  db: nicole_books_production
+
+EC2 prod instance ip: 34.229.165.234
+  -- open RDS PG instance to public access and connect using ENV=production on my local dev box.
+  -- create/migrate/execute in production
