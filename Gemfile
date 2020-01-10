@@ -38,6 +38,7 @@ gem 'bootstrap-datepicker-rails'
 gem "wysiwyg-rails"
 gem 'will_paginate-bootstrap4'
 
+# https://console.developers.google.com/navigation-error;errorUrl=%2Fapis%2Fdashboard%3Fproject%3Dinsteon-sample&authuser%3D3/permissions?authuser=3&folder=&organizationId=&project=nicolehallbooks
 gem 'omniauth-google-oauth2'
 
 
