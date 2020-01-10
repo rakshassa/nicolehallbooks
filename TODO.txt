@@ -34,7 +34,6 @@ EC2 prod instance ip: 34.229.165.234
   -- open RDS PG instance to public access and connect using ENV=production on my local dev box.
   -- create/migrate/execute in production
 
-rails s RAILS_ENV=production
 
 SECRET_KEY_BASE: dba8772d31a9f47b5fc19e711f3e3a3ac6d30fdfe0b2c559499ef23e9227bb1120aee238e9c9febddafe65aed70cda88b95b1531d893f9dc28bd13c8b7e7f791
   -- comes from rake secret
