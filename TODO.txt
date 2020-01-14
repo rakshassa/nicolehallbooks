@@ -1,7 +1,5 @@
 1.  configure storage.yml for S3 bucket to store active_storage image uploads.
 
--- deploy local active_storage to stabalize the instances (see production.rb)
--- reconfigure to use 10gb root drive
 -- use "eb ssh production" and look at the disks with "sfdisk" - find the 20 gig storage drive
   https://www.binarytides.com/linux-command-check-disk-partitions/
 -- change to Disk active_storage with root on 20 gig storage drive
