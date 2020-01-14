@@ -1,6 +1,6 @@
 module ApplicationHelper
   def page_title(separator = " – ")
-    [content_for(:title), "Nicole Hall's Books"].compact.join(separator)
+    [content_for(:title), "Nicole Hall"].compact.join(separator)
   end
 
   def page_heading(title)
