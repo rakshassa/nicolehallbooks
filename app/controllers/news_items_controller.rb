@@ -23,10 +23,8 @@ class NewsItemsController < ApplicationController
       if @news_item.save
         @news_item.save
         format.html { redirect_to news_items_path, notice: 'news_item was successfully created.' }
-        format.json { render :show, status: :created, location: @news_item }
       else
         format.html { render :new }
-        format.json { render json: @news_item.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -36,10 +34,8 @@ class NewsItemsController < ApplicationController
       if @news_item.update(news_item_params)
         @news_item.save
         format.html { redirect_to news_items_path, notice: 'news_item was successfully updated.' }
-        format.json { render :show, status: :ok, location: @news_item }
       else
         format.html { render :edit }
-        format.json { render json: @news_item.errors, status: :unprocessable_entity }
       end
     end
   end

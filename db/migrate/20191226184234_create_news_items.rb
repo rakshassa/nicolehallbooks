@@ -3,7 +3,7 @@ class CreateNewsItems < ActiveRecord::Migration[5.2]
     create_table :news_items do |t|
       t.string :title, limit: 100, null: false
       t.text :body
-      t.datetime :posted_date
+      t.datetime :posted_date, null: false
 
       t.timestamps
     end
