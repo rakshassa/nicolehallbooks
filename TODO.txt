@@ -1,18 +1,4 @@
-1.  configure storage.yml for S3 bucket to store active_storage image uploads.
-
--- use "eb ssh production" and look at the disks with "sfdisk" - find the 20 gig storage drive
-  https://www.binarytides.com/linux-command-check-disk-partitions/
--- change to Disk active_storage with root on 20 gig storage drive
-  https://edgeguides.rubyonrails.org/active_storage_overview.html#disk-service
-
--- git commit and eb deploy
--- check cpu with top -i -P (no idles, sort by cpu)
-  https://phoenixnap.com/kb/check-cpu-usage-load-linux
-
-
-
-
-====
-
 1. make custom user only for s3 buckets and use his keys for active_storage configuration
 2. make s3 bucket NOT public
+3. mailerlite - API keys and gem integration (ENV vars)
+
