@@ -42,7 +42,10 @@ gem 'will_paginate-bootstrap4'
 gem 'omniauth-google-oauth2'
 
 # mailchimp integration
-gem 'gibbon'
+# gem 'gibbon'
+
+# mailerlite integration
+gem 'mailerlite'
 
 # Need the sdk to use s3 bucket storage
 gem 'aws-sdk-s3', '~> 1'
