@@ -2,3 +2,4 @@
 2. make s3 bucket NOT public
 3. mailerlite - API keys and gem integration (ENV vars)
 
+

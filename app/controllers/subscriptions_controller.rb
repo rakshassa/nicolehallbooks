@@ -20,10 +20,16 @@ class SubscriptionsController < ApplicationController
   def tell_mailerlite(email)
     api_key = ENV['MAILERLITE_API_KEY']
     client = MailerLite::Client.new(api_key: api_key)
-    # client.create_subscriber(email: email, name: 'John Smith')
-    response = client.create_subscriber(email: email)
 
+    response = client.create_subscriber(email: email)
     Rails.logger.info "Response from creating subscriber: " + response.to_s
+
+    subscriber = { email: email }
+    response = client.create_group_subscriber(92635902, subscriber)
+
+    Rails.logger.info "Response from group subscription: " + response.to_s
+  rescue MailerLite::Unauthorized
+    Rails.logger.info "Failed to subscribe with mailerlite"
   end
 
   # def tell_mailchimp(email)
