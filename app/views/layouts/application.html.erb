@@ -15,4 +15,12 @@
 
     <%= yield %>
   </body>
+
+  <footer>
+    <div class="d-flex justify-content-center p-3">
+      <%= link_to(privacy_homes_path, class: "nav-item nav-link active") do %>
+        <span class="lnr lnr-pushpin" style='margin: 5px;'></span>Privacy Policy
+      <% end %>
+    </div>
+  </footer>
 </html>

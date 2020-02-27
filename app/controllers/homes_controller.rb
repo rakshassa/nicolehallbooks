@@ -4,6 +4,10 @@ class HomesController < ApplicationController
     @posts = NewsItem.news.order("posted_date DESC").paginate(page: params[:page], per_page: APP_CONFIG['posts_per_page'])
   end
 
+  def privacy
+
+  end
+
   def books
     @subscription = Subscription.new
     @posts = NewsItem.books.order("posted_date DESC").paginate(page: params[:page], per_page: APP_CONFIG['posts_per_page'])
@@ -18,7 +22,9 @@ class HomesController < ApplicationController
   end
 
   def backdoor
+  end
 
+  def whitelist
   end
 
   def email
