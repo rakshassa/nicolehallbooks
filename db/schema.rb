@@ -62,20 +62,11 @@ ActiveRecord::Schema.define(version: 2020_01_07_144923) do
   create_table "news_items", force: :cascade do |t|
     t.string "title", limit: 100, null: false
     t.text "body"
-    t.datetime "posted_date"
+    t.datetime "posted_date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_news", default: false
     t.boolean "is_book", default: false
-  end
-
-  create_table "news_links", force: :cascade do |t|
-    t.bigint "news_item_id", null: false
-    t.string "caption", limit: 50, null: false
-    t.string "url", limit: 200, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["news_item_id"], name: "index_news_links_on_news_item_id"
   end
 
   create_table "subscriptions", force: :cascade do |t|
@@ -98,5 +89,4 @@ ActiveRecord::Schema.define(version: 2020_01_07_144923) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "news_links", "news_items"
 end
