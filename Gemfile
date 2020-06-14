@@ -30,7 +30,7 @@ gem "font-awesome-rails"
 # gem 'libv8', '7.3.492.27.1'
 # gem 'mini_racer', '0.2.8'
 # gem 'therubyracer', :platform => :ruby
-
+gem 'sassc', '2.2.1'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'bootstrap-datepicker-rails'
