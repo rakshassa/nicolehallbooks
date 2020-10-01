@@ -41,7 +41,7 @@ Rails.application.configure do
     port:                 587,
     domain:               'nicolehallbooks.com',
     user_name:            'strikeforceraks',
-    password:             'Fadr1ian',
+    password:             ENV["MAILER_SMTP_PASSWORD"],
     authentication:       'plain',
     enable_starttls_auto: true
   }
