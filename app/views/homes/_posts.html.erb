@@ -8,7 +8,13 @@
               <p class="text-center"><%=post.posted_date.strftime('%B %d, %Y') %></p>
             </div>
             <div class="d-flex justify-content-center">
-               <p class="text-center"><h1 class="news-title"><%= post.title %></h1></p>
+               <p class="text-center">
+                 <h1 class="news-title">
+                   <a id="<%= post.title.parameterize(separator: '_') %>">
+                     <%= post.title %>
+                   </a>
+                 </h1>
+               </p>
             </div>
             <div class="d-flex justify-content-center">
               <% if post.picture.attached? %>

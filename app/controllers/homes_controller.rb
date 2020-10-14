@@ -10,7 +10,9 @@ class HomesController < ApplicationController
 
   def books
     @subscription = Subscription.new
-    @posts = NewsItem.books.order("posted_date DESC").paginate(page: params[:page], per_page: APP_CONFIG['posts_per_page'])
+    @posts = NewsItem.books.order("posted_date DESC")
+    # 10/14/2020 - Nicole no longer wants pagination on the books page.
+    # @posts = NewsItem.books.order("posted_date DESC").paginate(page: params[:page], per_page: APP_CONFIG['posts_per_page'])
   end
 
   def contact
