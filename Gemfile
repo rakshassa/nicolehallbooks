@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -20,7 +20,7 @@ gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.10.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -30,7 +30,7 @@ gem "font-awesome-rails"
 # gem 'libv8', '7.3.492.27.1'
 # gem 'mini_racer', '0.2.8'
 # gem 'therubyracer', :platform => :ruby
-gem 'sassc', '2.2.1'
+gem 'sassc', '2.4.0'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'bootstrap-datepicker-rails'
@@ -48,7 +48,7 @@ gem 'omniauth-google-oauth2'
 gem 'mailerlite'
 
 # Need the sdk to use s3 bucket storage
-gem 'aws-sdk-s3', '~> 1'
+gem 'aws-sdk-s3', '~> 1.68'
 
 
 group :development, :test do
