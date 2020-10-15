@@ -48,6 +48,15 @@
 
   <div class="row">
     <div class="col-8">
+      <%= f.label :piclink, "Picture Link", class: "font-weight-bold" %>
+      <div class="input-group input-group-lg">
+        <%= f.text_field :piclink, placeholder: " The url link for the picutre ", class: 'form-control input-lg' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
       <% if news_item.picture.attached? %>
         <%= f.label :existing_picture, "Current Image File: " + news_item&.picture&.blob&.filename&.to_s, class: "font-weight-bold" %>
         <image src="<%= url_for(@news_item.picture) %>"></image>

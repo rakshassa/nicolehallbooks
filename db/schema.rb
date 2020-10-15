@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_07_144923) do
+ActiveRecord::Schema.define(version: 2020_10_15_003339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 2020_01_07_144923) do
     t.datetime "updated_at", null: false
     t.boolean "is_news", default: false
     t.boolean "is_book", default: false
+    t.string "piclink", limit: 250
   end
 
   create_table "subscriptions", force: :cascade do |t|

@@ -20,7 +20,15 @@
             </div>
             <div class="d-flex justify-content-center">
               <% if post.picture.attached? %>
-                <p class=""><image src="<%= url_for(post.picture) %>"></image></p>
+                <p class="">
+                  <% if post.piclink.present? %>
+                    <%= '<a href="' + post.piclink + '">' %>
+                  <% end %>
+                  <image src="<%= url_for(post.picture) %>"></image>
+                  <% if post.piclink.present? %>
+                    <%= '</a>' %>
+                  <% end %>
+                </p>
               <% end %>
             </div>
             <p class="news-body fr-view"><%= raw post.body %></p>
