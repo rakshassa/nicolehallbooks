@@ -22,11 +22,11 @@
               <% if post.picture.attached? %>
                 <p class="">
                   <% if post.piclink.present? %>
-                    <%= link_to href: post.piclink do %>
-                  <% end %>
-                  <image src="<%= url_for(post.picture) %>"></image>
-                  <% if post.piclink.present? %>
+                    <%= link_to post.piclink do %>
+                      <image src="<%= url_for(post.picture) %>"></image>
                     <% end %>
+                  <% else %>
+                    <image src="<%= url_for(post.picture) %>"></image>
                   <% end %>
                 </p>
               <% end %>
