@@ -5,14 +5,16 @@
         <% records.each do |post| %>
           <div class="news-post">
             <div class="d-flex justify-content-center">
-              <p class="text-center"><%=post.posted_date.strftime('%B %d, %Y') %></p>
+              <p class="text-center">
+                <a id="<%= post.title.parameterize(separator: '_') %>">
+                  <%=post.posted_date.strftime('%B %d, %Y') %>
+                </a>
+              </p>
             </div>
             <div class="d-flex justify-content-center">
                <p class="text-center">
                  <h1 class="news-title">
-                   <a id="<%= post.title.parameterize(separator: '_') %>">
-                     <%= post.title %>
-                   </a>
+                  <%= post.title %>
                  </h1>
                </p>
             </div>
