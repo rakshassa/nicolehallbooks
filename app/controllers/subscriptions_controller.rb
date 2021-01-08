@@ -6,8 +6,7 @@ class SubscriptionsController < ApplicationController
 
     if verify_recaptcha && @subscription.save
       tell_mailerlite(@subscription.email)
-      # TODO: send to a subscribed_homes_path where the user gets confirmation of subscription.
-      redirect_to root_path
+      redirect_to subscribed_homes_path
     else
       redirect_to signup_homes_path, notice: 'Captcha Failed'
     end    

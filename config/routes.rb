@@ -21,6 +21,7 @@ Rails.application.routes.draw do
       get :privacy
       get :whitelist
       get :signup
+      get :subscribed
     end
   end
 

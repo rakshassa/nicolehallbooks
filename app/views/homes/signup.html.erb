@@ -12,8 +12,8 @@
         </div>
 
         <div id="signup_box" class="outer-grey-box">
-          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form inside-text">
-            <div class="ml-form-embedContent" style=" ">
+          <div class="row-form inside-text">
+            <div>
               <h4 class="signup-h4">How about a free book?</h4>
               <p class="signup-p">Sign up for my newsletter to receive a free copy of <em>Muse Interrupted</em>, the first book in the <b>Rise of the Lost Gods</b> series. You'll also be the first to know about new releases, sales, giveaways, and more!</p>
               <br>
@@ -21,54 +21,30 @@
 
             <%= form_for(@subscription) do |f| %>
             
-              <div class="ml-form-formContent signup-form-content">
+              <div class="signup-form-content">
                 <%= f.text_field :email, placeholder: " Your Email Address ", class: 'form-control input-lg' %>
-                
               </div>
-              <div class="ml-form-embedPermissions signup-form-perms" style="">
-                <div class="ml-form-embedPermissionsContent default signup-form-perms">
+
+              <div class="signup-form-perms" style="">
+                <div class="default signup-form-perms">
                   <h4>Marketing Permissions</h4>
                   <p>The information you provide will only be used to send you your free book and add you to Nicole's newsletter.&nbsp;Your privacy is important to us. Click below to be added to the email list!</p>
-                  <div class="ml-form-embedPermissionsOptions">
-                    <div class="ml-form-embedPermissionsOptionsCheckbox">
-                      <label>
-
-                            <input type="checkbox" name="gdpr[]" value="Email" xp-if="gdpr.title" class="email-checkbox" onchange="document.getElementById('sendsub').disabled = !this.checked;">
-
-                            <div class="label-description email-label">Email</div>
-
-                          </label>
-                      <div class="description" xp-if="gdpr.description">We will send you occasional emails about promotions, new books, and important updates to keep you in the loop.</div>
-                    </div>
+                  <div>
+                    <label>
+                      <input type="checkbox" name="agree" value="Email" class="email-checkbox" onchange="document.getElementById('sendsub').disabled = !this.checked;">
+                      <div class="email-label">Email</div>
+                    </label>
+                    <div class="description">We will send you occasional emails about promotions, new books, and important updates to keep you in the loop.</div>
                   </div>
                 </div>
-                <div class="ml-form-embedMailerLite-GDPR mailer-info">
+                <div class="mailer-info">
                   <p>We use MailerLite as our marketing automation platform. By clicking below to submit this form, you acknowledge that the information you provide will be transferred to MailerLite for processing in accordance with their <a href="https://www.mailerlite.com/privacy-policy" target="_blank">Privacy Policy</a> and <a href="https://www.mailerlite.com/terms-of-service" target="_blank">Terms of Service</a>.</p>
                 </div>
               </div>
-              <style type="text/css">
-                .ml-form-recaptcha {
-                  margin-bottom: 20px;
-                  float: left;
-                }
-              
-                .ml-form-recaptcha.ml-error iframe {
-                  border: solid 1px #ff0000;
-                }
-              
-                @media screen and (max-width: 768px) {
-                  .ml-form-recaptcha {
-                    transform: scale(0.77);
-                    -webkit-transform: scale(0.77);
-                    transform-origin: 0 0;
-                    -webkit-transform-origin: 0 0;
-                  }
-                }
-              </style>
               
               <%= recaptcha_tags %>
 
-              <div class="ml-form-embedSubmit">
+              <div>
                 <button type="submit" class="primary subscribe-button" disabled id="sendsub">Subscribe</button>
               </div>
             <% end %>

@@ -33,12 +33,19 @@ class HomesController < ApplicationController
     @subscription = Subscription.new
   end
 
-  def email
-    data = params[:body]
-    subject = params[:subject]
-    @from_email = params[:email]
-    ApplicationMailer.send_nicole_email(data, @from_email, subject).deliver
+  def subscribed
+  end
 
-    redirect_to root_path, notice: 'We sent your email to Nicole.'
+  def email
+    if verify_recaptcha
+      data = params[:body]
+      subject = params[:subject]
+      @from_email = params[:email]
+      ApplicationMailer.send_nicole_email(data, @from_email, subject).deliver
+
+      redirect_to root_path, notice: 'We sent your email to Nicole.'
+    else
+      redirect_to root_path, notice: 'Please complete the captcha to subscribe.'
+    end
   end
 end
