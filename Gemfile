@@ -46,6 +46,7 @@ gem 'omniauth-google-oauth2'
 
 # mailerlite integration
 gem 'mailerlite'
+gem 'recaptcha'
 
 # Need the sdk to use s3 bucket storage
 gem 'aws-sdk-s3', '~> 1.68'

@@ -20,6 +20,7 @@ Rails.application.routes.draw do
       post :email
       get :privacy
       get :whitelist
+      get :signup
     end
   end
 

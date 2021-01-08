@@ -29,6 +29,10 @@ class HomesController < ApplicationController
   def whitelist
   end
 
+  def signup
+    @subscription = Subscription.new
+  end
+
   def email
     data = params[:body]
     subject = params[:subject]
