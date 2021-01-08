@@ -4,15 +4,12 @@ class SubscriptionsController < ApplicationController
   def create
     @subscription = Subscription.new(subscription_params)
 
-    # tell_mailchimp(@subscription.email)
-    tell_mailerlite(@subscription.email)
-
-    respond_to do |format|
-      if @subscription.save
-        @subscription.save
-      end
-      format.html { redirect_to root_path, notice: 'You are subscribed!' }
-    end
+    if verify_recaptcha && @subscription.save
+      tell_mailerlite(@subscription.email)
+      redirect_to subscribed_homes_path
+    else
+      redirect_to signup_homes_path, notice: 'Captcha Failed'
+    end    
   end
 
   private
