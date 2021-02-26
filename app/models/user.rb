@@ -11,4 +11,11 @@ class User < ApplicationRecord
       user.save!
     end
   end
+
+  def self.validate(name, secret)
+    return false if name.blank?
+    return false if secret.blank?
+
+    User.where(name: name, secret: secret)
+  end
 end

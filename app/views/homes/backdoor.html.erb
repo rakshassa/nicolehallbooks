@@ -1,3 +1,14 @@
 <div class="container justify-content-center p-4">
-  <%= link_to image_tag("google-login.png", border: 0), "/auth/google_oauth2", id: "google_sign_in" %>
+  <%= form_tag(validate_sessions_path, :method => "post") do %>
+    <div class="row">
+    	<%= text_field_tag :name %>
+    </div>
+    <div class="row">
+    	<%= password_field_tag :secret %>
+    </div>
+
+    <div>
+    	<%= submit_tag "Login", :class => 'btn btn-large btn-primary' %>
+    </div>
+  <% end %>
 </div>
