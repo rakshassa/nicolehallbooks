@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy] do
     collection do
       post :ready
+      post :validate
     end
   end
 
