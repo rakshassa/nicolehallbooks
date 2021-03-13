@@ -3,6 +3,7 @@ class NewsItem < ApplicationRecord
   validates :title, presence: true, length: { in: 1..100 }
 
   has_one_attached :picture
+  belongs_to :group, optional: true
 
   scope :books, -> { where(is_book: true) }
   scope :news, -> { where(is_news: true) }

@@ -14,10 +14,22 @@
       <ul class="nav navbar-nav mx-auto">
         <li><%= link_to(root_path, class: "nav-item nav-link active") do %>
             <span class="lnr lnr-home" style='margin: 5px;'></span>HOME
-          <% end %></li>
-        <li><%= link_to(books_homes_path, class: "nav-item nav-link") do %>
+          <% end %>
+        </li>
+
+        <li class="nav-item dropdown">
+          <%= link_to(books_homes_path, class: "nav-link  dropdown-toggle", data: {toggle:"dropdown"}) do %>
             <span class="lnr lnr-book" style='margin: 5px;'></span>BOOKS
-          <% end %></li>
+          <% end %>
+
+          <ul class="dropdown-menu">
+            <% Group.order(:ordering).each do |group| %>
+              <li>
+                <%= link_to(group.name, group, class: "dropdown-item") %>
+              </li>
+            <% end %>
+          </ul>
+        </li>
 
         <li><%= link_to(about_homes_path, class: "nav-item nav-link") do %>
             <span class="lnr lnr-list" style='margin: 5px;'></span>ABOUT

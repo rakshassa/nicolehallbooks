@@ -48,6 +48,24 @@
 
   <div class="row">
     <div class="col-8">
+      <%= f.label :group_id, "Series", class: "font-weight-bold" %>
+      <div class="input-group input-group-lg">
+        <%= f.select :group_id, Group.order(:ordering).collect {|p| [ p.name, p.id ] }, { include_blank: true } %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
+      <%= f.label :book_number, "Book Number", class: "font-weight-bold" %>
+      <div class="input-group input-group-lg">
+        <%= f.number_field :book_number, class: 'form-control input-lg' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
       <%= f.label :piclink, "Picture Link", class: "font-weight-bold" %>
       <div class="input-group input-group-lg">
         <%= f.text_field :piclink, placeholder: " The url link for the picutre ", class: 'form-control input-lg' %>

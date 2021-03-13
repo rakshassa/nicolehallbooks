@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :groups
   root to: "homes#show"
 
   get 'auth/:provider/callback', to: 'sessions#create'

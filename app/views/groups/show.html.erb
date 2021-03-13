@@ -2,5 +2,5 @@
 <%= render :partial => 'homes/banner' %>
 
 <!-- Start Books Area -->
-<%= render :partial => 'homes/posts', locals: { records: NewsItem.where(id: @news_item.id), hide_date: true } %>
+<%= render :partial => 'books', locals: {records: @group.news_items.order(:book_number)} %>
 <!-- End Books Area -->

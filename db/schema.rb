@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_26_011859) do
+ActiveRecord::Schema.define(version: 2021_03_13_193605) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,13 @@ ActiveRecord::Schema.define(version: 2021_02_26_011859) do
     t.index ["identifier"], name: "index_characters_on_identifier", unique: true
   end
 
+  create_table "groups", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "ordering", default: 0, null: false
+  end
+
   create_table "news_items", force: :cascade do |t|
     t.string "title", limit: 100, null: false
     t.text "body"
@@ -68,6 +75,9 @@ ActiveRecord::Schema.define(version: 2021_02_26_011859) do
     t.boolean "is_news", default: false
     t.boolean "is_book", default: false
     t.string "piclink", limit: 250
+    t.integer "book_number", default: 0, null: false
+    t.bigint "group_id"
+    t.index ["group_id"], name: "index_news_items_on_group_id"
   end
 
   create_table "subscriptions", force: :cascade do |t|

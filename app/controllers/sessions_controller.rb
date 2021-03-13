@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 
   def validate
   	found = User.validate(params[:name], params[:secret])
-  	redirect_to root_path unless found.present?
+  	return redirect_to root_path unless found.present?
 
   	session[:user_id] = found.first.id
   	redirect_to news_items_path

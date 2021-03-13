@@ -4,6 +4,8 @@
       <div class="col-md-9">
         <% records.each do |post| %>
           <div class="news-post">
+
+            <% unless hide_date %>
             <div class="d-flex justify-content-center">
               <p class="text-center">
                 <a id="<%= post.title.parameterize(separator: '_') %>">
@@ -11,6 +13,8 @@
                 </a>
               </p>
             </div>
+            <% end %>
+
             <div class="d-flex justify-content-center">
                <p class="text-center">
                  <h1 class="news-title">
