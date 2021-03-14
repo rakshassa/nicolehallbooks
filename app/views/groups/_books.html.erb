@@ -18,9 +18,11 @@
                 <div class="d-flex justify-content-center">
                   <% if post.picture.attached? %>
                     <p class="">
-                      <%= link_to post do %>
-                        <image src="<%= url_for(post.picture) %>"></image>
-                      <% end %>
+                      <div class="portrait">
+                        <%= link_to post do %>
+                          <image src="<%= url_for(post.picture) %>" class="seriesimg"></image>
+                        <% end %>
+                      </div>
                     </p>
                   <% end %>
                 </div>
