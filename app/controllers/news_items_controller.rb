@@ -1,5 +1,5 @@
 class NewsItemsController < ApplicationController
-  before_action :ensure_admin
+  before_action :ensure_admin, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_news_item, only: [:show, :edit, :update, :destroy]
 
   def index
