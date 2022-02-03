@@ -24,6 +24,7 @@ Rails.application.routes.draw do
       get :whitelist
       get :signup
       get :subscribed
+      get :thank_you
     end
   end
 
