@@ -19,7 +19,7 @@
                   <% if post.picture.attached? %>
                     <p class="">
                       <div class="portrait">
-                        <%= link_to post do %>
+                        <%= link_to build_friendly_link(post) do %>
                           <image src="<%= url_for(post.picture) %>" class="seriesimg"></image>
                         <% end %>
                       </div>

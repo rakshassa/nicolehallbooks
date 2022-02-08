@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_13_193605) do
+ActiveRecord::Schema.define(version: 2022_02_08_024521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 2021_03_13_193605) do
     t.string "piclink", limit: 250
     t.integer "book_number", default: 0, null: false
     t.bigint "group_id"
+    t.string "friendly_link", limit: 25
     t.index ["group_id"], name: "index_news_items_on_group_id"
   end
 

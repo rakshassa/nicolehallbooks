@@ -7,6 +7,8 @@ class NewsItemsController < ApplicationController
   end
 
   def show
+    return redirect_to news_items_path if @news_item.nil?
+
     @subscription = Subscription.new
   end
 
@@ -53,11 +55,20 @@ class NewsItemsController < ApplicationController
 
     # Use callbacks to share common setup or constraints between actions.
     def set_news_item
-      @news_item = NewsItem.find(params[:id])
+      # @news_item = NewsItem.find(params[:id])
+
+      # allow routing by name in addition to id
+      if params[:id].match?(/\A\d+\Z/)
+        # if passed a number, use :id
+        @news_item = NewsItem.find(params[:id])
+      else
+        # if passed a name, use :username
+        @news_item = NewsItem.find_by_friendly_link(params[:id])
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def news_item_params
-      params.require(:news_item).permit(:posted_date, :title, :body, :picture, :is_book, :is_news, :piclink, :book_number, :group_id)
+      params.require(:news_item).permit(:posted_date, :title, :body, :picture, :is_book, :is_news, :piclink, :book_number, :group_id, :friendly_link)
     end
 end
