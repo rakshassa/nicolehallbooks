@@ -149,7 +149,7 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     multipart-post (2.1.1)
-    nio4r (2.5.5)
+    nio4r (2.5.8)
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
@@ -159,7 +159,7 @@ GEM
     pg (1.2.3-x64-mingw32)
     popper_js (1.16.0)
     public_suffix (4.0.6)
-    puma (5.2.1)
+    puma (5.6.4)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
@@ -293,7 +293,7 @@ DEPENDENCIES
   jquery-rails
   mailerlite
   pg (>= 0.18, < 2.0)
-  puma (~> 5.0)
+  puma (~> 5.6)
   rails (~> 5.2.2)
   recaptcha
   rspec-rails
