@@ -18,6 +18,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require froala_editor.min
+//= require font_awesome5
 //= require plugins/link.min
 //= require plugins/align.min
 //= require turbolinks

@@ -28,20 +28,6 @@ Rails.application.routes.draw do
     end
   end
 
-
-  resources :characters do
-    collection do
-      post :import_characters
-      post :import_character_gear
-      post :import_character_stats
-    end
-    member do
-      get :gear
-      get :gear_slots
-      get :stat_mods
-    end
-  end
-
   resources :news_items
   resources :subscriptions, only: [:create]
 end

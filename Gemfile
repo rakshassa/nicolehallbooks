@@ -24,7 +24,8 @@ gem 'jbuilder', '~> 2.10.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem "font-awesome-rails"
+# gem "font-awesome-rails"
+gem 'font_awesome5_rails'
 # gem 'bootstrap-sass', '~> 3.3'
 
 # gem 'libv8', '7.3.492.27.1'
