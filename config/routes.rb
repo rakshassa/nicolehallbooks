@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :groups
   root to: "homes#show"
 
   get 'auth/:provider/callback', to: 'sessions#create'
@@ -23,20 +24,7 @@ Rails.application.routes.draw do
       get :whitelist
       get :signup
       get :subscribed
-    end
-  end
-
-
-  resources :characters do
-    collection do
-      post :import_characters
-      post :import_character_gear
-      post :import_character_stats
-    end
-    member do
-      get :gear
-      get :gear_slots
-      get :stat_mods
+      get :thank_you
     end
   end
 

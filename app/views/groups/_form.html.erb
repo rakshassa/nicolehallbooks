@@ -1,0 +1,39 @@
+<%= form_with(model: group, local: true) do |f| %>
+  <% if group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+      <% group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-8">
+      <%= f.label :name, "Name", class: "font-weight-bold" %>
+      <div class="input-group input-group-lg">
+        <%= f.text_field :name, placeholder: " Type your Series Name ", class: 'form-control input-lg' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8">
+      <%= f.label :ordering, "Ordering", class: "font-weight-bold" %>
+      <div class="input-group input-group-lg">
+        <%= f.number_field :ordering, placeholder: " Lower goes higher on the page ", class: 'form-control input-lg' %>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <div class="actions row">
+    <div class="col-2">
+      <%= f.submit "Save", class: 'btn btn-primary' %>
+      <%= link_to 'Cancel', news_items_path, class: 'btn btn-warning' %>
+    </div>
+  </div>
+<% end %>

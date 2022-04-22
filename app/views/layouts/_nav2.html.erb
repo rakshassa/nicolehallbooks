@@ -5,7 +5,7 @@
       <!-- hamburger button to toggle menu -->
       <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
-        <span class="fa fa-bars"></span>
+        <span class="fas fa-bars"></span>
       </button>
     </div>
 
@@ -14,10 +14,22 @@
       <ul class="nav navbar-nav mx-auto">
         <li><%= link_to(root_path, class: "nav-item nav-link active") do %>
             <span class="lnr lnr-home" style='margin: 5px;'></span>HOME
-          <% end %></li>
-        <li><%= link_to(books_homes_path, class: "nav-item nav-link") do %>
+          <% end %>
+        </li>
+
+        <li class="nav-item dropdown">
+          <%= link_to(books_homes_path, class: "nav-link  dropdown-toggle", data: {toggle:"dropdown"}) do %>
             <span class="lnr lnr-book" style='margin: 5px;'></span>BOOKS
-          <% end %></li>
+          <% end %>
+
+          <ul class="dropdown-menu">
+            <% Group.order(:ordering).each do |group| %>
+              <li>
+                <%= link_to(group.name, group, class: "dropdown-item") %>
+              </li>
+            <% end %>
+          </ul>
+        </li>
 
         <li><%= link_to(about_homes_path, class: "nav-item nav-link") do %>
             <span class="lnr lnr-list" style='margin: 5px;'></span>ABOUT
@@ -30,16 +42,11 @@
 
     <!-- These links are separate from the toggled links -->
     <div id="social-links" class="col-md-3 px-0">
-      <!-- <%= link_to(root_path, class: "nav-item nav-link", title: 'Twitter') do %><i class="fa fa-twitter"></i><% end %> -->
       <%= link_to('https://www.bookbub.com/authors/nicole-hall', class: "nav-item nav-link", title: 'BookBub') do %><%= image_tag 'bookbub.png', width: 25, height: 25, alt: 'BookBub'%><% end %>
-
-      <%= link_to('https://www.facebook.com/nicolehallbooks', class: "nav-item nav-link", title: 'Facebook') do %><i class="fa fa-facebook"></i><% end %>
-      <%= link_to('https://www.instagram.com/nicolehallbooks', class: "nav-item nav-link", title: 'Instagram') do %><i class="fa fa-instagram"></i><% end %>
-      <%= link_to('https://www.pinterest.com/nicolehallbooks', class: "nav-item nav-link", title: 'Pinterest') do %><i class="fa fa-pinterest"></i><% end %>
-      <!-- <%= link_to(root_path, class: "nav-item nav-link", title: 'Tumblr') do %><i class="fa fa-tumblr"></i><% end %> -->
-      <!-- <i class="fa fa-goodreads"></i> -->
-      <%= link_to('https://www.amazon.com/Nicole-Hall/e/B085VLG75K', class: "nav-item nav-link", title: 'Amazon') do %><i class="fa fa-amazon"></i><% end %>
-
+      <%= link_to('https://www.tiktok.com/@nicolehallbooks', class: "nav-item nav-link", title: 'TikTok') do image_tag('fa5/brands/tiktok.svg', height: '25px', style: "color: black;") end %>
+      <%= link_to('https://www.facebook.com/nicolehallbooks', class: "nav-item nav-link", title: 'Facebook') do image_tag('fa5/brands/facebook.svg', height: '25px', style: "color: black;") end %>
+      <%= link_to('https://www.instagram.com/nicolehallbooks', class: "nav-item nav-link", title: 'Instagram') do image_tag('fa5/brands/instagram.svg', height: '25px', style: "color: black;") end %>
+      <%= link_to('https://www.amazon.com/Nicole-Hall/e/B085VLG75K', class: "nav-item nav-link", title: 'Amazon')  do image_tag('fa5/brands/amazon.svg', height: '25px', style: "color: black;") end %>
 
 
       <% if current_user.present? %>

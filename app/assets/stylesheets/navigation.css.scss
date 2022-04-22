@@ -76,3 +76,109 @@ body{
     float: none;
     vertical-align: top;
 }
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu{ display: none; }
+  
+  .navbar .nav-item:hover .dropdown-menu{ display: block; }
+  .navbar .nav-item .dropdown-menu{ margin-top:0; }
+} 
+/* ============ desktop view .end// ============ */
+
+/* https://css-tricks.com/examples/ButtonMaker/# */
+.buybutton {
+  border-top: 1px solid #e797f7;
+  background: #ba65d6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#943e9c), to(#ba65d6));
+  background: -webkit-linear-gradient(top, #943e9c, #ba65d6);
+  background: -moz-linear-gradient(top, #943e9c, #ba65d6);
+  background: -ms-linear-gradient(top, #943e9c, #ba65d6);
+  background: -o-linear-gradient(top, #943e9c, #ba65d6);
+  padding: 5.5px 11px;
+  -webkit-border-radius: 19px;
+  -moz-border-radius: 19px;
+  border-radius: 19px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: white;
+  font-size: 13px;
+  font-family: Georgia, serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.buybutton:hover {
+  border-top-color: #742878;
+  background: #742878;
+  color: #ccc;
+}
+.buybutton:active {
+  border-top-color: #4c1b5c;
+  background: #4c1b5c;
+}
+
+.orderbutton {
+  border-top: 1px solid #5f8eed;
+  background: #00856c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#23edea), to(#267c96));
+  background: -webkit-linear-gradient(top, #23edea, #267c96);
+  background: -moz-linear-gradient(top, #23edea, #267c96);
+  background: -ms-linear-gradient(top, #23edea, #267c96);
+  background: -o-linear-gradient(top, #23edea, #267c96);
+  padding: 5.5px 11px;
+  -webkit-border-radius: 19px;
+  -moz-border-radius: 19px;
+  border-radius: 19px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: white;
+  font-size: 13px;
+  font-family: Georgia, serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.orderbutton:hover {
+  border-top-color: #289599;
+  background: #289599;
+  color: #ccc;
+}
+.orderbutton:active {
+  border-top-color: #1b505c;
+  background: #1b505c;
+}
+
+.bluebutton {
+  border-top: 1px solid #61ebcd;
+  background: #5899b5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5899b5), to(#267c96));
+  background: -webkit-linear-gradient(top, #5899b5, #267c96);
+  background: -moz-linear-gradient(top, #5899b5, #267c96);
+  background: -ms-linear-gradient(top, #5899b5, #267c96);
+  background: -o-linear-gradient(top, #5899b5, #267c96);
+  padding: 5.5px 11px;
+  -webkit-border-radius: 19px;
+  -moz-border-radius: 19px;
+  border-radius: 19px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: white;
+  font-size: 13px;
+  font-family: Georgia, serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.bluebutton:hover {
+  border-top-color: #396578;
+  background: #396578;
+  color: #ccc;
+}
+.bluebutton:active {
+  border-top-color: #284754;
+  background: #284754;
+}

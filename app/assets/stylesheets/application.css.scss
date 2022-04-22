@@ -13,7 +13,7 @@
  */
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "font-awesome";
+@import 'font_awesome5';
 @import "bootstrap";
 @import "bootstrap-datepicker";
 
@@ -30,7 +30,6 @@
 
 // local files
 @import "signup";
-@import "characters";
 @import "subscribe";
 @import "tabs";
 
@@ -38,4 +37,5 @@
 @import "banner";
 @import "news-post";
 @import "profile";
+@import "groups";
 

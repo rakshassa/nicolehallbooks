@@ -7,6 +7,8 @@
         <th>Types</th>
         <th>Date</th>
         <th>Title</th>
+        <th>Series</th>
+        <th>Book Number</th>
         <th></th>
       </tr>
     </thead>
@@ -17,6 +19,8 @@
           <td><%= news_item.display_types %></td>
           <td><%= news_item.posted_date.strftime('%B %d, %Y') %></td>
           <td><%= news_item.title %></td>
+          <td><%= news_item.group&.name %></td>
+          <td><%= news_item.book_number %></td>
           <td>
             <%= link_to 'Change', edit_news_item_path(news_item), class: "badge badge-primary" %>
             <%= link_to 'Delete', news_item,
@@ -30,4 +34,35 @@
   <br>
 
   <%= link_to 'New News Item', new_news_item_path, class: 'btn btn-primary' %>
+</div>
+
+<br>
+<div class="container">
+<h1>Series</h1>
+
+  <table id="view-index" class="table table-striped table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Ordering</th>
+        <th></th>
+      </tr>
+    </thead>
+
+  <tbody>
+    <% Group.order(:ordering).each do |group| %>
+      <tr>
+        <td><%= group.name %></td>
+        <td><%= group.ordering %></td>
+        <td><%= link_to 'Change', edit_group_path(group), class: "badge badge-primary" %>
+            <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' }, class: "badge badge-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Series', new_group_path, class: 'btn btn-primary' %>
+
 </div>

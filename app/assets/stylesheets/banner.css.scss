@@ -47,6 +47,37 @@
   font-size: 40px;
 }
 
+.banner2 {
+  right: 0;
+  left: 0;
+  background-image: image-url("nicole-cover.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  width: 100% !important;
+  min-width: 400px;
+}
+
+.banner-content2 {
+  text-align: center;
+}
+
+.banner-content2 h1 {
+  font-family: 'playlistscript';
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.15em;
+  margin-bottom: 20px;
+  color: white;
+  padding: 10px;
+}
+
+.fabars {
+  background-image: image-url("fa5/solid/bars.svg");
+  color: black;
+}
+
+
 /* non-white background for expanded nav menu on mobile */
 @media (max-width: 767px) {
   .banner-content h1 {

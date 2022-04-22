@@ -31,6 +31,7 @@ class HomesController < ApplicationController
 
   def signup
     @subscription = Subscription.new
+    @skip_nav = true
   end
 
   def subscribed

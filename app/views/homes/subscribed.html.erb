@@ -1,15 +1,20 @@
 <%= page_heading "Contact" %>
 <%= render 'banner' %>
 
-<div class="profile-container py-4">
-  <div class="container">
+<div class="full-2 py-4">
+  <div class="container vertical-center">
     <div class="row">
-      <div class="col-md-12 profile-body ">
+      <div class="col-4"></div>
+      <div class="col-md-7 profile-body ">
       	<br>
       	<br>
-        <h1>Thank you for subscribing!</h1>
+        <h1>Thank you</h1>
         <br>
-        <p>You can use the menus at the top to look through the rest of our website.</p>
+        <p>Almost finished, I need to confirm your email address.</p>
+        <p>Please click the link in the email I just sent you and we're done.</p>
+        <br>
+
+        <%= button_to 'Back to Home', root_path, class: "home-button", method: :get %>
       </div>
     </div>
   </div>

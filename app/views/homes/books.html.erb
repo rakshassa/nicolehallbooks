@@ -2,5 +2,5 @@
 <%= render 'banner' %>
 
 <!-- Start Books Area -->
-<%= render 'posts', records: @posts %>
+<%= render partial: 'posts', locals: { records: @posts, hide_date: true } %>
 <!-- End Books Area -->

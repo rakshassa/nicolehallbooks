@@ -1,0 +1,47 @@
+<div class="profile-container py-4">
+  <div class="container">
+    <div class="row">
+      <div class="d-flex justify-content-center">
+        <p class="text-center">
+          <h1 class="news-title">
+            <%= @group.name %>
+          </h1>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9">
+        <div class="row">
+          <% @group.news_items.order(:book_number).each do |post| %>
+            <div class="col-md-4">        
+              <div class="news-post">
+                <div class="d-flex justify-content-center">
+                  <% if post.picture.attached? %>
+                    <p class="">
+                      <div class="portrait">
+                        <%= link_to build_friendly_link(post) do %>
+                          <image src="<%= url_for(post.picture) %>" class="seriesimg"></image>
+                        <% end %>
+                      </div>
+                    </p>
+                  <% end %>
+                </div>
+                <div class="d-flex justify-content-center">
+                   <p class="text-center">
+                     <h3 class="news-title">
+                      <%= "Book #{post.book_number}" %>
+                     </h3>
+                   </p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <hr>
+      <div class="col-md-3">
+        <%= render 'layouts/sidebar' %>
+      </div>
+    </div>
+  </div>
+</div>

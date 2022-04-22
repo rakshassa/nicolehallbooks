@@ -24,14 +24,15 @@ gem 'jbuilder', '~> 2.10.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem "font-awesome-rails"
+# gem "font-awesome-rails"
+gem 'font_awesome5_rails'
 # gem 'bootstrap-sass', '~> 3.3'
 
 # gem 'libv8', '7.3.492.27.1'
 # gem 'mini_racer', '0.2.8'
 # gem 'therubyracer', :platform => :ruby
 gem 'sassc', '2.2.1'
-gem 'bootstrap'
+gem 'bootstrap', '4.6.1' # version >5 uses data-bs-toggle instead (more breaking changes?)
 gem 'jquery-rails'
 gem 'bootstrap-datepicker-rails'
 

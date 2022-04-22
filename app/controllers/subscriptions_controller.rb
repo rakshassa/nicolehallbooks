@@ -4,7 +4,8 @@ class SubscriptionsController < ApplicationController
   def create
     @subscription = Subscription.new(subscription_params)
 
-    if verify_recaptcha && @subscription.save
+    # if verify_recaptcha && @subscription.save
+    if @subscription.save
       tell_mailerlite(@subscription.email)
       redirect_to subscribed_homes_path
     else
@@ -25,7 +26,7 @@ class SubscriptionsController < ApplicationController
     response = client.create_group_subscriber(92635902, subscriber)
 
     Rails.logger.info "Response from group subscription: " + response.to_s
-  rescue MailerLite::Unauthorized
+  rescue MailerLite::Unauthorized, MailerLite::BadRequest
     Rails.logger.info "Failed to subscribe with mailerlite"
   end
 

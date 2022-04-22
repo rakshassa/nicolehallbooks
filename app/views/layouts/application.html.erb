@@ -12,7 +12,8 @@
   </head>
 
   <body class="">
-    <%= render 'layouts/nav2' %>
+    <%= render 'layouts/nav2' unless defined?(@skip_nav) %>
+    <%= render 'layouts/nav3' if defined?(@skip_nav) %>
     <section class="top-spacer relative" id="top"></section>
 
     <%= yield %>

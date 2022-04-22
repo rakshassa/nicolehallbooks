@@ -1,6 +1,14 @@
 document.addEventListener("turbolinks:load", function() {
   //------- Activate froala html editor -----//
-  new FroalaEditor('#example', {toolbarInline: false});
+  new FroalaEditor('#example', {
+    toolbarInline: false,
+    linkStyles: {
+        RegularLink: 'Regular',
+        buybutton: 'Purple Button',
+        orderbutton: 'Teal Button',
+        bluebutton: 'Blue Button'
+    }
+  });
 
   //------- Active Nice Select --------//
   $('select').niceSelect();
