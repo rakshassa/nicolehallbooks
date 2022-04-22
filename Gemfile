@@ -32,7 +32,7 @@ gem 'font_awesome5_rails'
 # gem 'mini_racer', '0.2.8'
 # gem 'therubyracer', :platform => :ruby
 gem 'sassc', '2.2.1'
-gem 'bootstrap'
+gem 'bootstrap', '4.6.1' # version >5 uses data-bs-toggle instead (more breaking changes?)
 gem 'jquery-rails'
 gem 'bootstrap-datepicker-rails'
 
