@@ -17,13 +17,14 @@ class SubscriptionsController < ApplicationController
 
   def tell_mailerlite(email)
     api_key = ENV['MAILERLITE_API_KEY']
+    group_id = ENV['MAILERLITE_GROUP_ID'].to_i
     client = MailerLite::Client.new(api_key: api_key)
 
     response = client.create_subscriber(email: email)
     Rails.logger.info "Response from creating subscriber: " + response.to_s
 
     subscriber = { email: email }
-    response = client.create_group_subscriber(92635902, subscriber)
+    response = client.create_group_subscriber(group_id, subscriber)
 
     Rails.logger.info "Response from group subscription: " + response.to_s
   rescue MailerLite::Unauthorized, MailerLite::BadRequest
