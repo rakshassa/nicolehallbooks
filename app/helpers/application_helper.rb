@@ -1,6 +1,7 @@
 module ApplicationHelper
   def page_title(separator = " – ")
-    [content_for(:title), "Nicole Hall"].compact.join(separator)
+  	penname = (ENV['PENNAME'] == 'nikki') ? 'Nikki Hall' : 'Nicole Hall'
+    [content_for(:title), penname].compact.join(separator)
   end
 
   def page_heading(title)

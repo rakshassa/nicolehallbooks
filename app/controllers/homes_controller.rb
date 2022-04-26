@@ -43,8 +43,8 @@ class HomesController < ApplicationController
       subject = params[:subject]
       @from_email = params[:email]
       ApplicationMailer.send_nicole_email(data, @from_email, subject).deliver
-
-      redirect_to root_path, notice: 'We sent your email to Nicole.'
+      penname = (ENV['PENNAME'] == 'nikki') ? 'Nikki' : 'Nicole'
+      redirect_to root_path, notice: "We sent your email to #{penname}."
     else
       redirect_to root_path, notice: 'Please complete the captcha to subscribe.'
     end

@@ -1,3 +1,4 @@
+<% penname = (ENV['PENNAME'] == 'nikki') ? 'Nikki' : 'Nicole' %>
 <!-- Start Navigation Area -->
 <nav class="navbar navbar-default navbar-expand-md fixed-top" role="navigation">
   <div class="container">
@@ -43,8 +44,8 @@
     <!-- These links are separate from the toggled links -->
     <div id="social-links" class="col-md-3 px-0">
       <%= link_to('https://www.bookbub.com/authors/nicole-hall', class: "nav-item nav-link", title: 'BookBub') do %><%= image_tag 'bookbub.png', width: 25, height: 25, alt: 'BookBub'%><% end %>
-      <%= link_to('https://www.tiktok.com/@nicolehallbooks', class: "nav-item nav-link", title: 'TikTok') do image_tag('fa5/brands/tiktok.svg', height: '25px', style: "color: black;") end %>
-      <%= link_to('https://www.facebook.com/nicolehallbooks', class: "nav-item nav-link", title: 'Facebook') do image_tag('fa5/brands/facebook.svg', height: '25px', style: "color: black;") end %>
+      <%= link_to("https://www.tiktok.com/@#{penname.downcase}hallbooks", class: "nav-item nav-link", title: 'TikTok') do image_tag('fa5/brands/tiktok.svg', height: '25px', style: "color: black;") end %>
+      <%= link_to("https://www.facebook.com/#{penname.downcase}hallbooks", class: "nav-item nav-link", title: 'Facebook') do image_tag('fa5/brands/facebook.svg', height: '25px', style: "color: black;") end %>
       <%= link_to('https://www.instagram.com/nicolehallbooks', class: "nav-item nav-link", title: 'Instagram') do image_tag('fa5/brands/instagram.svg', height: '25px', style: "color: black;") end %>
       <%= link_to('https://www.amazon.com/Nicole-Hall/e/B085VLG75K', class: "nav-item nav-link", title: 'Amazon')  do image_tag('fa5/brands/amazon.svg', height: '25px', style: "color: black;") end %>
 

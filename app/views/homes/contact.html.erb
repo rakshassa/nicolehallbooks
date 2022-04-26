@@ -1,11 +1,12 @@
 <%= page_heading "Contact" %>
 <%= render 'banner' %>
+<% penname = (ENV['PENNAME'] == 'nikki') ? 'Nikki' : 'Nicole' %>
 
 <div class="profile-container py-4">
   <div class="container">
     <div class="row">
       <div class="col-md-9 profile-body ">
-        <h1>Send Nicole an Email</h1>
+        <h1>Send <%= penname %> an Email</h1>
 
         <%= form_tag email_homes_path do%>
 
@@ -41,9 +42,9 @@
 
         <%end%>
 
-        <p>You can find Nicole at any of the following:</p>
+        <p>You can find <%= penname %> at any of the following:</p>
 
-        <p><a href="https://www.facebook.com/nicolehallbooks">Facebook</a></p>
+        <p><a href="https://www.facebook.com/<%= penname.downcase %>hallbooks">Facebook</a></p>
         <p><a href="https://www.instagram.com/nicolehallbooks">Instagram</a></p>
         <p><a href="https://www.amazon.com/Nicole-Hall/e/B085VLG75K">Amazon</a></p>
         <p><a href="https://www.bookbub.com/authors/nicole-hall">Bookbub</a></p>
