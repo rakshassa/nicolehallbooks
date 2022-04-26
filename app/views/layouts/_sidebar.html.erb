@@ -1,6 +1,8 @@
+<% penname = (ENV['PENNAME'] == 'nikki') ? 'Nikki' : 'Nicole' %>
+
 <div class="py-5 pl-4" id="subscribe-floater">
   <h3>Want a FREE book?</h3>
-  <p>Sign up for Nicole Hall's weekly newsletter. You’ll get a free ebook just for joining, plus new release info, giveaways, exclusive content, and previews of new books especially for fans.</p>
+  <p>Sign up for <%= penname %> Hall's weekly newsletter. You’ll get a free ebook just for joining, plus new release info, giveaways, exclusive content, and previews of new books especially for fans.</p>
 
   <div id="subscribe-contents">
     <%= form_for(@subscription) do |f| %>

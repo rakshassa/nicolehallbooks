@@ -1,12 +1,23 @@
+<% penname = (ENV['PENNAME'] == 'nikki') ? 'Nikki' : 'Nicole' %>
 <!-- start banner Area -->
 <div class="banner relative" id="home">
   <div >
     <div class="row align-items-center justify-content-center">
       <div class="banner-content py-4 col-md-12">
-        <h1 class="">
+        <h1 class="<%= "banner-#{penname.downcase}" %>">
+          <% if penname == 'Nikki' %>
+          Nikki Hall
+          <% else %>
           Nicole Hall Books
+          <% end %>
         </h1>
-        <h4><div class="tag-line" style="color: white;">Magic. Sass. Love.</div></h4>
+        <h4><div class="tag-line-<%= penname.downcase %>" style="color: white;">
+          <% if ENV['PENNAME'] == 'nikki' %>
+          Sports <span class="nikki-dot"></span> Spice <span class="nikki-dot"></span> Sass
+          <% else %>
+          Magic. Sass. Love.
+          <% end %>
+        </div></h4>
       </div>
     </div>
   </div>

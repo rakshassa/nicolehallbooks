@@ -1,15 +1,16 @@
 <%= page_heading "Whitelist" %>
 <%= render 'banner' %>
+<% penname = (ENV['PENNAME'] == 'nikki') ? 'Nikki' : 'Nicole' %>
 
 <!DOCTYPE html>
 <html>
 <head>
-<title>Nicole Hall's Email Whitelist Instructions</title>
+<title><%= penname %> Hall's Email Whitelist Instructions</title>
 
-<meta name="description" content="Whitelist Nicole Hall's to be sure you get the email you requested...">
+<meta name="description" content="Whitelist <%= penname %> Hall's to be sure you get the email you requested...">
 
-<meta property="og:title" content="Nicole Hall's Email Whitelist Instructions">
-<meta property="og:description" content="Whitelist Nicole Hall's to be sure you get the email you requested...">
+<meta property="og:title" content="<%= penname %> Hall's Email Whitelist Instructions">
+<meta property="og:description" content="Whitelist <%= penname %> Hall's to be sure you get the email you requested...">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://s3.amazonaws.com/wlist-images/email-whitelist-screenshot-full.png">
 
@@ -225,7 +226,7 @@ a.backTop {
 
 <center>
 
-<h1>Nicole Hall's&nbsp;Email Whitelist Instructions</h1>
+<h1><%= penname %> Hall's&nbsp;Email Whitelist Instructions</h1>
 
 </center>
 
@@ -234,11 +235,11 @@ Since your Email Provider probably uses some type of overzealous filtering; We a
 </p>
 
 <p>
-If you do not see an email from <strong>Nicole Hall - Romance author</strong> in your Inbox, my email may have mistakenly been sent to your spam folder.
+If you do not see an email from <strong><%= penname %> Hall - Romance author</strong> in your Inbox, my email may have mistakenly been sent to your spam folder.
 </p>
 
 <p>
-Please <strong>open your spam folder</strong> and if you find an email from <strong>Nicole Hall - Romance author</strong> open it</strong> and mark it as <strong>"Not spam"</strong>...
+Please <strong>open your spam folder</strong> and if you find an email from <strong><%= penname %> Hall - Romance author</strong> open it</strong> and mark it as <strong>"Not spam"</strong>...
 </p>
 
 <p>
@@ -303,7 +304,7 @@ Please <strong>open your spam folder</strong> and if you find an email from <str
 
 <p><strong>Is your email client or spam filter not listed?</strong></p>
 
-<p>If <strong>Nicole Hall - Romance author</strong> is being filtered, try adding <strong>nicole@nicolehallbooks.com</strong> to your Address Book or Contact list.
+<p>If <strong><%= penname %> Hall - Romance author</strong> is being filtered, try adding <strong>nicole@nicolehallbooks.com</strong> to your Address Book or Contact list.
 
 <p>If messages continue to be sent to your junk folder contact your ISP or spam filter application support and ask how to whitelist <strong>nicole@nicolehallbooks.com</strong></p>
 
@@ -323,7 +324,7 @@ Please <strong>open your spam folder</strong> and if you find an email from <str
 
 <h4>At times, Gmail mistakenly sends emails you want, to the Spam folder...</h4>
 
-<p>If you do not readily find an email from <strong>Nicole Hall - Romance author</strong></p>
+<p>If you do not readily find an email from <strong><%= penname %> Hall - Romance author</strong></p>
 
 <p>Please check your <strong>Gmail Spam Folder:</strong></p>
 
@@ -334,7 +335,7 @@ Please <strong>open your spam folder</strong> and if you find an email from <str
 <p>To assure you continue to get emails you asked to receive, <strong>Create a Filter</strong></p>
 
 <ol>
-	<li>If you find an email from <strong>Nicole Hall - Romance author</strong> in Gmail spam? </li>
+	<li>If you find an email from <strong><%= penname %> Hall - Romance author</strong> in Gmail spam? </li>
 	<li>Open the email please.</li>
 	<li>Click 'Dots' button on the top right, to reveal your choices.</li>
 </ol>
@@ -460,12 +461,12 @@ Please <strong>open your spam folder</strong> and if you find an email from <str
 
 	<br/>
 
-<p>Now you will always see <strong>Nicole Hall - Romance author</strong> in your Primary Inbox tab!</li>
+<p>Now you will always see <strong><%= penname %> Hall - Romance author</strong> in your Primary Inbox tab!</li>
 
 <p>Next, if the email remains open? Please mark the email as "Not spam"</p>
 
 <ol>
-	<li> - If you see an email from <strong> Nicole Hall - Romance author</strong>: Open the email please.</li>
+	<li> - If you see an email from <strong> <%= penname %> Hall - Romance author</strong>: Open the email please.</li>
 	<li> - Click the button on the alert, labeled <span style=" color: #FFFFFF; border: 1px solid #FFFFFF; border-radius: 5px; background-color: #616161; padding: 3px;">Report Not spam </span></li>
 </ol>
 
@@ -569,7 +570,7 @@ End Gmail Add to Contacts -->
 <p> - If you are using Gmail Tabs such as 'Promotions' please open your Promotions tab in Gmail.</p>
 
 <ol>
-	<li> - If you find an email from <strong>Nicole Hall - Romance author</strong> in your Gmail Promotions tab:</li>
+	<li> - If you find an email from <strong><%= penname %> Hall - Romance author</strong> in your Gmail Promotions tab:</li>
 	<li> - Grab and drag my email to the Primary Inbox Tab.</li>
 	<li> - After doing so, you will receive an alert like the one below at the top of your Gmail toolbar.</li>
 
@@ -584,14 +585,14 @@ End Gmail Add to Contacts -->
 	<br/>
 
 	<li> - Click <u>Yes</u> in the black alert box at Gmail.</li>
-	<li> - This way you will always see <strong>Nicole Hall - Romance author</strong> in your Primary Inbox tab...</li>
+	<li> - This way you will always see <strong><%= penname %> Hall - Romance author</strong> in your Primary Inbox tab...</li>
 </ol>
 
 
 <h4>Also you can create a filter...</strong></h4>
 
 <ol>
-	<li> - If you find an email from <strong>Nicole Hall - Romance author</strong> in your Gmail Promotions tab:</li>
+	<li> - If you find an email from <strong><%= penname %> Hall - Romance author</strong> in your Gmail Promotions tab:</li>
 	<li> - Open the email please.</li>
 	<li> - Click the dots menu on the top left of the email.</li>
 </ol>
@@ -680,7 +681,7 @@ End Gmail Add to Contacts -->
 
 <br/>
 
-<p>Now you will always see <strong>Nicole Hall - Romance author</strong> in your Primary Inbox tab...</li>
+<p>Now you will always see <strong><%= penname %> Hall - Romance author</strong> in your Primary Inbox tab...</li>
 
 
 		<!-- End Gmail Tabs -->
@@ -699,9 +700,9 @@ End Gmail Add to Contacts -->
 
 <h4>If you are using the Gmail Mobile App on your mobile device, please open the app now</h4>
 
-<p>Should you not readily see an email from <strong>Nicole Hall - Romance author</strong>, please check the Spam Folder:</p>
+<p>Should you not readily see an email from <strong><%= penname %> Hall - Romance author</strong>, please check the Spam Folder:</p>
 
-<p>Should an email from <strong>Nicole Hall - Romance author appear mistakenly</strong> sent to Gmail spam?</p>
+<p>Should an email from <strong><%= penname %> Hall - Romance author appear mistakenly</strong> sent to Gmail spam?</p>
 
 <p>Please open the email and Tap the <img src="https://s3.amazonaws.com/wlist-images/gmail-app-dots.png" /> icon.</p>
 
@@ -746,7 +747,7 @@ End Gmail Add to Contacts -->
 <p><strong>Are you are using Gmail Tabs such as "Promotions"</strong> please open your Promotions tab in Gmail.</p>
 
 <ol>
-	<li>When you find the email from <strong>Nicole Hall - Romance author</strong></li>
+	<li>When you find the email from <strong><%= penname %> Hall - Romance author</strong></li>
 	<li>Tap the <img src="https://s3.amazonaws.com/wlist-images/gmail-app-dots.png" /> menu icon - top right.</li>
 	<li>Then select <strong>Move to</strong>.</li>
 
@@ -783,7 +784,7 @@ End Gmail Add to Contacts -->
 
 <br/>
 
-<p>This should help Gmail to know, you always want to see <strong>Nicole Hall - Romance author</strong> in your Primary Inbox tab...</p>
+<p>This should help Gmail to know, you always want to see <strong><%= penname %> Hall - Romance author</strong> in your Primary Inbox tab...</p>
 
 	<!-- End Gmail App -->
 
@@ -801,16 +802,16 @@ End Gmail Add to Contacts -->
 
 <br/>
 
-<h4>If you do not see an email</strong> from <strong>Nicole Hall - Romance author</strong> in your Inbox...</h4>
+<h4>If you do not see an email</strong> from <strong><%= penname %> Hall - Romance author</strong> in your Inbox...</h4>
 
-<p>Check your Spam Folder. If an email from <strong>Nicole Hall - Romance author</strong> is there?</p>
+<p>Check your Spam Folder. If an email from <strong><%= penname %> Hall - Romance author</strong> is there?</p>
 
 <ol>
 	<li> - Please open the email.</li>
 	<li> - Next click the <strong>Not Spam</strong> button on the top toolbar.</li>
 </ol>
 
-<p>To ensure delivery: Create a filter to automatically send email from <strong>Nicole Hall - Romance author</strong> to your Inbox.</p>
+<p>To ensure delivery: Create a filter to automatically send email from <strong><%= penname %> Hall - Romance author</strong> to your Inbox.</p>
 
 <ol>
 	<li> - Move your mouse over or tap the <strong>Gear</strong> icon in the top right navigation bar.</li>
@@ -822,7 +823,7 @@ End Gmail Add to Contacts -->
 	<li> - Enter our email address <strong>nicole@nicolehallbooks.com</strong> in the text box next to <strong>Contains...</strong></li>
 	<li> - Choose the destination folder to which you would like the message delivered. For example: Inbox.</li>
 	<li> - Click or tap <strong>Save...</strong></li>
-	<li> - You will see in the next screen -Deliver to <strong>Inbox</strong> if From contains <strong>Nicole Hall - Romance author</strong>-</li>
+	<li> - You will see in the next screen -Deliver to <strong>Inbox</strong> if From contains <strong><%= penname %> Hall - Romance author</strong>-</li>
 	<li> - Click or tap <strong>Save</strong> on this screen.</li>
 	<li> - You will be returned to your Yahoo! Inbox.</li>
 </ol>
@@ -847,7 +848,7 @@ End Gmail Add to Contacts -->
 
 <p>Periodically check the Junk folder for email messages that were marked as junk mistakenly.</p>
 
-<p>To indicate that an email message from <strong>Nicole Hall - Romance author</strong> isn�t junk:</p>
+<p>To indicate that an email message from <strong><%= penname %> Hall - Romance author</strong> isn�t junk:</p>
 
 <ol>
 	<li> - Open your Mail app and go to the Mailboxes screen</li>
@@ -857,7 +858,7 @@ End Gmail Add to Contacts -->
 	<br/>
 	<br/>
 	<li> - Select the <strong>Junk</strong> folder.</li>
-	<li> - Find the email from <strong>Nicole Hall - Romance author</strong> and slide it left to see options.</li>
+	<li> - Find the email from <strong><%= penname %> Hall - Romance author</strong> and slide it left to see options.</li>
 	<br/>
 	<img src="https://s3.amazonaws.com/wlist-images/iphone-swipe-left.png" style="border: 1px solid #CCCCCC;" alt="Screenshot of iPhone swipe left screen" />
 	<br/>
@@ -873,7 +874,7 @@ End Gmail Add to Contacts -->
 	<br/>
 </ol>
 
-<p>The message is moved to your Inbox. Subsequent email messages from <strong>Nicole Hall - Romance author</strong> will no longer be marked as junk.</p>
+<p>The message is moved to your Inbox. Subsequent email messages from <strong><%= penname %> Hall - Romance author</strong> will no longer be marked as junk.</p>
 
 <p>By default, messages in the Junk folder are deleted after 30 days so be sure to check it often to whitelist relevant email.</p>
 
@@ -895,11 +896,11 @@ End Gmail Add to Contacts -->
 
 <h4>Outlook's mobile app now offers a "Focused Inbox" for your important email</h4>
 
-<p> - To add <strong>Nicole Hall - Romance author</strong> to your list of <strong>Focused Inbox</strong> on the Outlook App...</p>
+<p> - To add <strong><%= penname %> Hall - Romance author</strong> to your list of <strong>Focused Inbox</strong> on the Outlook App...</p>
 
 <p>Please open the mobile Outlook app on your Android, Microsoft or iPhone:</p>
 
-<p>Then open the email from <strong>Nicole Hall - Romance author</strong>:</p>
+<p>Then open the email from <strong><%= penname %> Hall - Romance author</strong>:</p>
 
 <ol>
 	<li> - Click the dropdown menu
@@ -913,7 +914,7 @@ End Gmail Add to Contacts -->
 	<img src="https://s3.amazonaws.com/wlist-images/outlook-app-moveto.png"  style="border: 1px solid #CCCCCC;" width="250px" alt="Screenshot of Outlook App move to screen" />
 	<br/>
 	<li> - Tap <strong>Move</strong></li>
-	<li>Now all future messages from <strong>Nicole Hall - Romance author</strong> will appear in your <strong>Focused Inbox</strong></li>
+	<li>Now all future messages from <strong><%= penname %> Hall - Romance author</strong> will appear in your <strong>Focused Inbox</strong></li>
 </ol>
 
 <p>You can also remove unwanted emails from your <strong>Focused Inbox</strong> as well by repeating this process in your Focused tab.</p>
@@ -938,7 +939,7 @@ End Gmail Add to Contacts -->
 
 <h4>To ensure you continue to receive important emails in Outlook Office:</h4>
 
-<p>Please add <strong>Nicole Hall - Romance author</strong> to your list of "Safe senders" on Outlook:</p>
+<p>Please add <strong><%= penname %> Hall - Romance author</strong> to your list of "Safe senders" on Outlook:</p>
 
 <ol>
 	<li> - Right click our email in your Inbox email list pane.</li>
@@ -985,8 +986,8 @@ End Gmail Add to Contacts -->
 <p>To ensure messages from specific email addresses are not sent to your Junk Email folder, you can do one of two things:</p>
 
 <ol>
-	<li> - Check the <strong>Junk</strong> folder. If you see the <strong>Nicole Hall - Romance author</strong> email in your Inbox</li>
-	<li> - Open the email from <strong>Nicole Hall - Romance author</strong>...</li>
+	<li> - Check the <strong>Junk</strong> folder. If you see the <strong><%= penname %> Hall - Romance author</strong> email in your Inbox</li>
+	<li> - Open the email from <strong><%= penname %> Hall - Romance author</strong>...</li>
 	<li> - Click the "Wait it's safe" link</li>
 </ol>
 
@@ -994,7 +995,7 @@ End Gmail Add to Contacts -->
 
 	<div>
 	<hr/>
-	<p>Nicole Hall - Romance author  (nicole@nicolehallbooks.com)
+	<p><%= penname %> Hall - Romance author  (nicole@nicolehallbooks.com)
 
 	<br/>To: you@outlook.com</p>
 	<div>
@@ -1018,7 +1019,7 @@ End Gmail Add to Contacts -->
 	<li> - Click the link <strong>Safe senders</strong> on the next page.</li>
 	<li> - Enter the email address <strong>nicole@nicolehallbooks.com</strong> in the text box.</li>
 	<li> - Click <strong>Add to list</strong></li>
-	<li> - <strong> Nicole Hall - Romance author</strong> will now be added to your list of <strong>Safe senders</strong></li>
+	<li> - <strong> <%= penname %> Hall - Romance author</strong> will now be added to your list of <strong>Safe senders</strong></li>
 	<li> - Emails added to your <strong>Safe senders</strong> will not be delivered by mistake to your <strong>Junk</strong> folder.
 </ol>
 
@@ -1040,7 +1041,7 @@ End Gmail Add to Contacts -->
 
 <h4>To ensure important emails get delivered to your AOL Inbox- Please complete these two steps...</h4>
 
-<p>If you find <strong>Nicole Hall - Romance author</strong> in your spam folder:</p>
+<p>If you find <strong><%= penname %> Hall - Romance author</strong> in your spam folder:</p>
 
 <ol>
 	<li>Right click the email.</li>
@@ -1050,11 +1051,11 @@ End Gmail Add to Contacts -->
 <p>Add <strong>nicole@nicolehallbooks.com</strong> to your Address Book:</p>
 
 <ol>
-	<li> - Open the email from <strong>Nicole Hall - Romance author</strong></li>
-	<li> - Click the <strong>show details</strong> link next to <strong>Nicole Hall - Romance author</strong> in the From field.</li>
+	<li> - Open the email from <strong><%= penname %> Hall - Romance author</strong></li>
+	<li> - Click the <strong>show details</strong> link next to <strong><%= penname %> Hall - Romance author</strong> in the From field.</li>
 	<li> - Move your mouse over or tap <strong>nicole@nicolehallbooks.com</strong> to show the menu.</li>
 	<li> - Click or tap <strong>Add contact</strong> in the menu displayed.</li>
-	<li> - Add <strong>Nicole Hall - Romance author</strong> to the name fields</li>
+	<li> - Add <strong><%= penname %> Hall - Romance author</strong> to the name fields</li>
 	<li> - Click <strong>Add contact</strong></li>
 </ol>
 
@@ -1067,7 +1068,7 @@ End Gmail Add to Contacts -->
 
 <ol>
 	<li> - By default AOL now blocks all images.</li>
-	<li> - Open the email from <strong>Nicole Hall - Romance author</strong> please.</li>
+	<li> - Open the email from <strong><%= penname %> Hall - Romance author</strong> please.</li>
 	<li> - Click <strong>Don't block this sender</strong> please.</li>
 	<li> - Now you will see our complete emails with no effort on your part...</li>
 </ol>
@@ -1093,16 +1094,16 @@ End Gmail Add to Contacts -->
 <h4>Please log into your Xfinity account and select your Comcast webmail:</h4>
 
 <ol>
-	<li>Should you find an email from <strong>Nicole Hall - Romance author</strong> in your spam folder:</li>
+	<li>Should you find an email from <strong><%= penname %> Hall - Romance author</strong> in your spam folder:</li>
 	<li>Open the email.</li>
 	<li>Click the <span style="border: 1px solid #CCCCCC; padding: 3px; background-color: #f4f4f4;">&nbsp;
 		<img src="https://s3.amazonaws.com/wlist-images/no-icon.png" alt="No icon" /> Spam</span> (not spam) icon on the top toolbar.</li>
 </ol>
 
-<p>Next please, add <strong>Nicole Hall - Romance author</strong> to your address book:</p>
+<p>Next please, add <strong><%= penname %> Hall - Romance author</strong> to your address book:</p>
 
 <ol>
-	<li> - Please open the email from <strong>Nicole Hall - Romance author</strong>.</li>
+	<li> - Please open the email from <strong><%= penname %> Hall - Romance author</strong>.</li>
 	<li> - Click on the button at the top left of the email that says:</li>
 
 	<br/>
@@ -1147,7 +1148,7 @@ End Gmail Add to Contacts -->
 <ol>
 
 <li> - Check <strong>Suspect Email</strong> folder</li>
-<li> - Add <strong>Nicole Hall - Romance author</strong>  to your address book.</li>
+<li> - Add <strong><%= penname %> Hall - Romance author</strong>  to your address book.</li>
 </ol>
 
 <p>With EarthLink, if you have SpamBlocker turned on, suspect messages are automatically send to your Suspect Email folder if the Domain is not in your address book.
@@ -1155,7 +1156,7 @@ End Gmail Add to Contacts -->
 <p><strong>Suspect Email Folder:</strong></p>
 
 <ol>
-<li> - While in the <strong>Suspect Email</strong> folder, if you see <strong> Nicole Hall - Romance author</strong>...</li>
+<li> - While in the <strong>Suspect Email</strong> folder, if you see <strong> <%= penname %> Hall - Romance author</strong>...</li>
 <li> - Select the <strong>Move to Inbox and Add Contact</strong> option from the drop down menu.</li>
 <li> - This will add <strong>nicole@nicolehallbooks.com</strong> to your Address Book for future email delivery assurance.</li>
 </ol>
@@ -1214,11 +1215,11 @@ End Gmail Add to Contacts -->
 
 <h4>Please open your Thunderbird email client:</h4>
 
-<p>If an email from <strong>Nicole Hall - Romance author</strong> appears in your Junk Folder:</p>
+<p>If an email from <strong><%= penname %> Hall - Romance author</strong> appears in your Junk Folder:</p>
 
 <p>Please mark that message as <strong>Not Junk</strong>.</p>
 
-<p>Next, please add <strong>Nicole Hall - Romance author</strong> to your Address Book:</p>
+<p>Next, please add <strong><%= penname %> Hall - Romance author</strong> to your Address Book:</p>
 
 <ol>
 <li> - Click the <strong>Address Book</strong> button.</li>
@@ -1328,7 +1329,7 @@ End Gmail Add to Contacts -->
 <p>While McAfee has removed spam protection in the latest Anti-Virus software- You may still have a version that offers spam filtering.</p>
 
 <ol>
-	<li>In order to add <strong>Nicole Hall - Romance author</strong> to the friends whitelist, please open McAfee and click on <strong>Web & Email Protection</strong>.</li>
+	<li>In order to add <strong><%= penname %> Hall - Romance author</strong> to the friends whitelist, please open McAfee and click on <strong>Web & Email Protection</strong>.</li>
 
 	<li>Then click on <strong>Anti-Spam</strong></li>
 
@@ -1336,7 +1337,7 @@ End Gmail Add to Contacts -->
 
 	<li>Click on <strong>Friends list</strong></li>
 
-	<li> - Please add <strong>nicole@nicolehallbooks.com</strong> to your "Friends List" to always allow emails from <strong>Nicole Hall - Romance author</strong>.</li>
+	<li> - Please add <strong>nicole@nicolehallbooks.com</strong> to your "Friends List" to always allow emails from <strong><%= penname %> Hall - Romance author</strong>.</li>
 </ol>
 
 	<!-- End McAfee -->
@@ -1355,14 +1356,14 @@ End Gmail Add to Contacts -->
 
 <br/>
 
-<h4>If you received an email message from Nicole Hall - Romance author that was incorrectly moved to the Spam Mail folder by the Anti-Spam Toolbar you can prevent this from occurring in the future</h4>
+<h4>If you received an email message from <%= penname %> Hall - Romance author that was incorrectly moved to the Spam Mail folder by the Anti-Spam Toolbar you can prevent this from occurring in the future</h4>
 
 <p>The Anti-Spam Toolbar detects spam by looking for certain keywords in the email's subject or body. Occasionally, it may detect what you consider legitimate email as spam.</p>
 
 <p><strong>To prevent this from occurring you can do either of the following:</strong></p>
 
 <ol>
-	<li> - Add the <strong>Nicole Hall - Romance author</strong> to the list of Approved Senders.</li>
+	<li> - Add the <strong><%= penname %> Hall - Romance author</strong> to the list of Approved Senders.</li>
 	<li> - Decrease the Spam Email Filter Strength.</li>
 </ol>
 
@@ -1445,7 +1446,7 @@ End Gmail Add to Contacts -->
 <ol>
 <li> - Open your Webmail or Gmail where you use SaneBox.</li>
 <li> - Open your @SaneLater folder.</li>
-<li> - If you find an email from <strong>Nicole Hall - Romance author</strong> or an email from <strong>nicole@nicolehallbooks.com</strong> in @SaneLater...</li>
+<li> - If you find an email from <strong><%= penname %> Hall - Romance author</strong> or an email from <strong>nicole@nicolehallbooks.com</strong> in @SaneLater...</li>
 <li> - Please drag my email to your Inbox folder.</li>
 <li> - By doing this you will always get our great content in your Inbox from now on!</li>
 </ol>
@@ -1497,7 +1498,7 @@ End Gmail Add to Contacts -->
 	<li> - Open your email client. Barracuda should send you a summary each day listing quarantined items. Choose the most recent Barracuda email message.</li>
 
 <li> -
-Locate the email from <strong> Nicole Hall - Romance author</strong> and the sender email address <strong>nicole@nicolehallbooks.com</strong> that you do not want quarantined in the future. Click on the word "Whitelist," which is in green print to the right of the email title. This will open your list in a web browser.
+Locate the email from <strong> <%= penname %> Hall - Romance author</strong> and the sender email address <strong>nicole@nicolehallbooks.com</strong> that you do not want quarantined in the future. Click on the word "Whitelist," which is in green print to the right of the email title. This will open your list in a web browser.
 </li>
 
 <li> -
@@ -1537,7 +1538,7 @@ Click the box to the left of the email that you would like to whitelist. At the 
 
 <h2 id="spamfighter">SPAMfighter</h2>
 
-<p>Highlight the email from <strong>Nicole Hall - Romance author</strong> with the email address <strong>nicole@nicolehallbooks.com</strong> to Whitelist.</p>
+<p>Highlight the email from <strong><%= penname %> Hall - Romance author</strong> with the email address <strong>nicole@nicolehallbooks.com</strong> to Whitelist.</p>
 
 <p>Click "More" in the SPAMfighter Toolbar and select "Whitelist".</p>
 
@@ -1620,7 +1621,7 @@ If you get a pop-up box offering you to upgrade to SPAMfighter Pro, it is becaus
 <li> - Click OK.</li>
 </ol>
 
-<p>Nicole Hall - Romance author is in no way associated with any of the brands, websites or applications quoted here. All Trademarks &reg; are the property of their respective owners.</p>
+<p><%= penname %> Hall - Romance author is in no way associated with any of the brands, websites or applications quoted here. All Trademarks &reg; are the property of their respective owners.</p>
 
 <center>
 <!-- Please retain this link for continued use of the copyrighted images supplied - Thank You! -->
