@@ -7,12 +7,23 @@
       <div class="col-md-9 profile-body ">
         <%= image_tag("NicoleHallBooks.jpg", style: 'float:left;height:250px;margin:10px;') %>
         <% penname = (ENV['PENNAME'] == 'nikki') ? 'Nikki' : 'Nicole' %>
+        <% if ENV['PENNAME'] == 'nikki' %>
+
+        <p>Nikki Hall is a smart-ass with a Ph.D. and a potty mouth. She writes stories that have spice and sass because she doesn't know any other way. Coffee makes her happy, messes make her stabby, and she’d sell one of her children for a second season of Firefly. She also writes paranormal romance under the name Nicole Hall.</p>
+
+        <p>Let Nikki know what you thought about her books because she loves hearing from readers. Email her at nikkihallbooks@gmail.com, find her on TikTok at @nikkihallbooks, or follow her on Facebook at <%= link_to 'nikkihallbooks', 'https://www.facebook.com/nikkihallbooks' %></p>
+
+        <p>Want to find out when the newest Nikki Hall book hits the shelves? Sign up for her newsletter to receive a free ebook plus new release info, giveaways, exclusive content, and previews of new books especially for fans.</p>
+
+        <% else %>
 
         <p><%= penname %> Hall is a smart-ass with a Ph.D. and a potty mouth. She writes stories that have magic, sass, and romance because she believes that everyone deserves a little happiness. Coffee makes her happy, messes make her stabby, and she’d sell one of her children for a second season of Firefly. Her paranormal romance books are available on Amazon now.</p>
 
         <p>Let <%= penname %> know what you thought about her sassy, magical world because she really does love hearing from readers. Email her at nicolehallbooks@gmail.com or join her reader group <%= link_to 'Muse Interrupted Romance', 'https://www.facebook.com/groups/museinterrupted' %> on Facebook!</p>
         
         <p>Want to find out when the newest <%= penname %> Hall book hits the shelves? Sign up for her weekly newsletter. You’ll get a free ebook, plus new release info, giveaways, exclusive content, and previews of the new books especially for fans.</p>
+        
+        <% end %>
       </div>
 
       <div class="col-md-3 px-2">
