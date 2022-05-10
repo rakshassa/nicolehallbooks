@@ -17,13 +17,21 @@
 
     <div class="row align-items-center justify-content-center" style="width: 100%">
       <div class="col-4">
-        <%= image_tag("signupimage.png", class: 'signup-image') %>
+        <% if ENV['PENNAME'] == 'nikki' %>
+          <%= image_tag("nikki-signup-book.png", class: 'signup-image', style: 'min-height: 400px;') %>
+        <% else %>
+          <%= image_tag("signupimage.png", class: 'signup-image') %>
+        <% end %>
       </div>
 
       <div id="signup_box" class="outer-grey-box col-8 align-items-center justify-content-center"  style="text-align: center;">
         <div class="row-form inside-text">
           <div class="align-items-center justify-content-center"  style="text-align: center;">
-            <h4 class="signup-h4">Magic. Sass. Romance.</h4>
+            <% if ENV['PENNAME'] == 'nikki' %>
+              <h4 class="signup-h4">Sports. Spice. Sass.</h4>
+            <% else %>
+              <h4 class="signup-h4">Magic. Sass. Romance.</h4>
+            <% end %>
             <p class="signup-p">To get your free ebook, you just need to tell me where to send it. Enter your email address to get your story delivered to your inbox. You'll also be added to my weekly newsletter, and you'll be the first to know next time I have some cool stuff to give away (you can unsubscribe at any time).</p>
             <br>
           </div>
